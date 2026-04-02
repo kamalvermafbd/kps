@@ -224,7 +224,7 @@ export default function App() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-blue-400 shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 98106 81140</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Clock size={18} className="text-blue-400 shrink-0" />
@@ -241,7 +241,7 @@ export default function App() {
       {/* Sticky CTAs */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-slate-100 p-3 flex gap-3">
         <a 
-          href="tel:+919876543210" 
+          href="tel:+919810681140" 
           className="flex-1 bg-slate-100 text-slate-900 py-3 rounded-xl flex items-center justify-center font-bold text-sm"
         >
           <Phone size={18} className="mr-2" /> Call Now
@@ -256,7 +256,7 @@ export default function App() {
 
       {/* Floating WhatsApp */}
       <a 
-        href="https://wa.me/919876543210" 
+        href="https://wa.me/919810681140" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-20 right-6 md:bottom-8 md:right-8 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
