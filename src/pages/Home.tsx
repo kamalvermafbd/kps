@@ -170,7 +170,8 @@ export default function Home({ services }: HomeProps) {
 }
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
- const image =
+const [imageLoaded, setImageLoaded] = React.useState(false);
+  const image =
   service.image_url ||
   `https://picsum.photos/seed/${service.slug}/800/600`;
   
@@ -182,19 +183,23 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       transition={{ delay: index * 0.1 }}
       className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
-        {image ? (
-          <img 
-            src={image} 
-            alt={service.service_name} 
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            referrerPolicy="no-referrer"
-          />
-        ) : (
-          <div className="w-full h-full bg-slate-100 animate-pulse" />
-        )}
-        
-      </div>
+
+<div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+  {!imageLoaded && (
+    <div className="absolute inset-0 animate-pulse bg-slate-200" />
+  )}
+
+  <img
+    src={image}
+    alt={service.service_name}
+    className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-700 ${
+      imageLoaded ? "opacity-100" : "opacity-0"
+    }`}
+    onLoad={() => setImageLoaded(true)}
+    referrerPolicy="no-referrer"
+  />
+</div>
+      
       
       <div className="p-8 flex flex-col flex-1">
         <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
