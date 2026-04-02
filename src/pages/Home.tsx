@@ -170,8 +170,10 @@ export default function Home({ services }: HomeProps) {
 }
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
-  const image = `https://picsum.photos/seed/${service.slug}/800/600`;
-
+ const image =
+  service.image_url ||
+  `https://picsum.photos/seed/${service.slug}/800/600`;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
