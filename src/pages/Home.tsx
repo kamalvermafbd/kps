@@ -193,11 +193,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         ) : (
           <div className="w-full h-full bg-slate-100 animate-pulse" />
         )}
-        <div className="absolute top-4 left-4">
-          <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-blue-600 shadow-sm">
-            {service.city}
-          </span>
-        </div>
+        
       </div>
       
       <div className="p-8 flex flex-col flex-1">
