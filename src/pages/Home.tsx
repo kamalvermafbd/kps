@@ -93,6 +93,67 @@ export default function Home({ services }: HomeProps) {
         </div>
       </section>
 
+{/* Intro Video Section */}
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    
+    {/* Video */}
+    <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+      <div className="aspect-video">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/39zCdwhUm3s"
+          title="KRP Healthcare Introduction"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+
+    {/* Content */}
+    <div>
+      <h2 className="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">
+        Welcome to KRP Health Care
+      </h2>
+
+      <h3 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6 leading-tight">
+        Complete Healthcare Under One Roof
+      </h3>
+
+      <p className="text-lg text-slate-600 leading-relaxed mb-10">
+        KRP Health Care offers expert physiotherapy, nutrition, psychology,
+        gynecology, and urology consultations — all in one trusted center.
+        Our mission is personalized, affordable, and reliable care for complete recovery.
+      </p>
+
+      <div className="space-y-8">
+        {[
+          {
+            no: "01",
+            title: "Multidisciplinary Team of Experts",
+            desc: "From physiotherapists to dieticians, psychologists, and specialists, we provide coordinated care."
+          },
+          {
+            no: "02",
+            title: "Patient-Centered Care Approach",
+            desc: "Every treatment plan is designed around your personal recovery journey and comfort."
+          }
+        ].map((item, i) => (
+          <div key={i} className="border-t border-slate-200 pt-6">
+            <div className="flex items-center gap-4 mb-3">
+              <span className="text-slate-400 font-bold">{item.no}</span>
+              <h4 className="text-xl font-bold text-slate-900">{item.title}</h4>
+            </div>
+            <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      
       {/* Services Grid */}
       <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
