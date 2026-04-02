@@ -99,7 +99,7 @@ export default function Home({ services }: HomeProps) {
     
     {/* Video */}
     <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 h-full">
-      <div className="aspect-video">
+      <div className="h-full min-h-[420px]">
         <iframe
           className="w-full h-full"
           src="https://www.youtube.com/embed/39zCdwhUm3s"
