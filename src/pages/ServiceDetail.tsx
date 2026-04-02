@@ -76,11 +76,26 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
               </div>
               <h2 className="text-2xl font-bold text-slate-900">Treatment Overview</h2>
             </div>
-            <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
 
-<p className="text-lg mb-6">
-  {service.intro_text}
-</p>
+
+            <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mb-8 not-prose">
+    <div>
+      <p className="text-lg text-slate-600 leading-relaxed">
+        {service.intro_text}
+      </p>
+    </div>
+
+    {service.image_url && (
+      <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <img
+          src={service.image_url}
+          alt={service.name}
+          className="w-full h-64 object-cover"
+        />
+      </div>
+    )}
+  </div>
               
               <h3 className="text-xl font-bold text-slate-900 mb-4">Who Needs This Treatment?</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
