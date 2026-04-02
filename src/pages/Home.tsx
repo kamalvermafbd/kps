@@ -231,11 +231,13 @@ export default function Home({ services }: HomeProps) {
   <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white p-10 h-full">
     <div className="flex flex-col md:flex-row gap-8 items-start">
       
-      <img
-        src="https://i.pravatar.cc/300?img=12"
-        alt="Rajiv Parashar"
-        className="w-28 h-28 rounded-full object-cover border-4 border-white/20"
-      />
+    {/*
+<img
+  src="https://i.pravatar.cc/300?img=12"
+  alt="Rajiv Parashar"
+  className="w-28 h-28 rounded-full object-cover border-4 border-white/20"
+/>
+*/}
 
       <div className="space-y-6">
         <p className="text-lg leading-relaxed text-white/90">
