@@ -29,7 +29,7 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [services, setServices] = useState<Service[]>([]);
   const location = useLocation();
-
+ 
   useEffect(() => {
   apiGet("getServices").then((data) => {
     if (data.success) {
