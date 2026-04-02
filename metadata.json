@@ -1,0 +1,7 @@
+{
+  "name": "KRP Healthcare - Premium Physiotherapy Faridabad",
+  "description": "Advanced Physiotherapy & Rehabilitation Services in Faridabad. Specialized recovery programs by expert physiotherapists.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
