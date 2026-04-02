@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { 
@@ -12,19 +12,13 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { Service } from "../types";
-import { generateMedicalImage } from "../lib/gemini";
 
 interface HomeProps {
   services: Service[];
 }
 
 export default function Home({ services }: HomeProps) {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    generateMedicalImage("Modern physiotherapy clinic session in India, professional equipment, bright atmosphere, realistic medical scene")
-      .then(setHeroImage);
-  }, []);
+ const heroImage = "https://picsum.photos/seed/krp-clinic/1600/900";
 
   return (
     <div className="space-y-24 pb-24">
@@ -176,12 +170,7 @@ export default function Home({ services }: HomeProps) {
 }
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
-  const [image, setImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    generateMedicalImage(service.card_image_prompt + ", realistic medical scene, Indian clinic setting, high detail")
-      .then(setImage);
-  }, [service.card_image_prompt]);
+  const image = `https://picsum.photos/seed/${service.slug}/800/600`;
 
   return (
     <motion.div
