@@ -77,9 +77,11 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
               <h2 className="text-2xl font-bold text-slate-900">Treatment Overview</h2>
             </div>
             <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
-              <p className="text-lg mb-6">
-                Our {service.name} program in Faridabad is designed to address the root cause of your condition, not just the symptoms. We use a combination of manual therapy, advanced modalities, and therapeutic exercises to ensure a full recovery.
-              </p>
+
+<p className="text-lg mb-6">
+  {service.intro_text}
+</p>
+              
               <h3 className="text-xl font-bold text-slate-900 mb-4">Who Needs This Treatment?</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
                 {service.symptoms?.split(",").map((symptom, i) => (
