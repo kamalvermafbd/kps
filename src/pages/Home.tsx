@@ -110,15 +110,8 @@ export default function Home({ services }: HomeProps) {
             <ServiceCard key={service.slug} service={service} index={index} />
           ))}
         </div>
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-  <div className="text-center mb-10">
-    <h3 className="text-3xl font-bold text-slate-900">
-      Loved by Our Patients
-    </h3>
-    <p className="text-slate-600 mt-2">
-      Real recovery stories from orthopedic, sports, and pain rehabilitation patients
-    </p>
-  </div>
+      </section>
+        
 
   
       
@@ -154,9 +147,33 @@ export default function Home({ services }: HomeProps) {
               ))}
             </div>
           </div>
+       
+    
+          <div className="relative">
+            <div className="aspect-square bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://picsum.photos/seed/physio/800/800" 
+                alt="Physiotherapy Session" 
+                className="w-full h-full object-cover opacity-80 mix-blend-overlay"
+                referrerPolicy="no-referrer"
+              />
+            </div>
 
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="text-center mb-10">
+    <h3 className="text-3xl font-bold text-slate-900">
+      Loved by Our Patients
+    </h3>
+    <p className="text-slate-600 mt-2">
+      Real recovery stories from orthopedic, sports, and pain rehabilitation patients
+    </p>
+  </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     {[
       {
         initials: "RS",
@@ -209,27 +226,9 @@ export default function Home({ services }: HomeProps) {
       </div>
     ))}
   </div>
-</div>
-
-
-
         
-      </section>
-
-
-          <div className="relative">
-            <div className="aspect-square bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://picsum.photos/seed/physio/800/800" 
-                alt="Physiotherapy Session" 
-                className="w-full h-full object-cover opacity-80 mix-blend-overlay"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
-          </div>
-        </div>
-      </section>
+</section>
+      
     </div>
   );
 }
