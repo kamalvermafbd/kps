@@ -170,7 +170,7 @@ export default function Home({ services }: HomeProps) {
 }
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
-const [imageLoaded, setImageLoaded] = React.useState(false);
+
   const image =
   service.image_url ||
   `https://picsum.photos/seed/${service.slug}/800/600`;
@@ -184,18 +184,11 @@ const [imageLoaded, setImageLoaded] = React.useState(false);
       className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
     >
 
-<div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-  {!imageLoaded && (
-    <div className="absolute inset-0 animate-pulse bg-slate-300" />
-  )}
-
+<div className="relative aspect-[4/3] overflow-hidden">
   <img
     src={image}
     alt={service.service_name}
-    className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-700 ${
-      imageLoaded ? "opacity-100" : "opacity-0"
-    }`}
-    onLoad={() => setImageLoaded(true)}
+    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
     referrerPolicy="no-referrer"
   />
 </div>
