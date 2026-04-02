@@ -98,7 +98,7 @@ export default function Home({ services }: HomeProps) {
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
     {/* Video */}
     <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-   <div className="h-[520px]">
+   <div className="aspect-video lg:h-[520px]">
         <iframe
           className="w-full h-full"
           src="https://www.youtube.com/embed/39zCdwhUm3s"
