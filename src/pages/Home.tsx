@@ -227,17 +227,54 @@ export default function Home({ services }: HomeProps) {
           </div>
        
     
-          <div className="relative">
-            <div className="aspect-square bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://picsum.photos/seed/physio/800/800" 
-                alt="Physiotherapy Session" 
-                className="w-full h-full object-cover opacity-80 mix-blend-overlay"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+      <div className="relative">
+  <div className="rounded-3xl overflow-hidden shadow-2xl bg-slate-800 text-white p-10 h-full">
+    <div className="flex flex-col md:flex-row gap-8 items-start">
+      
+      <img
+        src="https://i.pravatar.cc/300?img=12"
+        alt="Rajiv Parashar"
+        className="w-28 h-28 rounded-full object-cover border-4 border-white/20"
+      />
 
-          </div>
+      <div className="space-y-6">
+        <p className="text-lg leading-relaxed text-white/90">
+          “After spending more than 20 years in Australia, my heart always longed
+          for my homeland. I returned to India with one purpose – to give my
+          people the same world-class healthcare I had seen abroad, but with the
+          warmth of our own soil.”
+        </p>
+
+        <p className="text-lg leading-relaxed text-white/90">
+          <span className="font-bold text-white">
+            KRP Health Care is my commitment to the nation
+          </span>{" "}
+          – to help every patient live a healthier, pain-free life. Physiotherapy
+          is our strength, but we also care for the mind and body through Diet &
+          Nutrition, Psychology, Urology, and Gynaecology services.
+        </p>
+
+        <p className="text-lg leading-relaxed text-white/90">
+          This is not just a company for me,{" "}
+          <span className="font-bold text-white">
+            it is my way of serving the nation
+          </span>{" "}
+          – by healing one person at a time, and building a healthier India.
+        </p>
+
+        <p className="text-base font-semibold text-white">
+          — Rajiv Parashar
+          <span className="text-white/70 font-normal">
+            {" "}
+            Co-Founder & Director KRP Health Care
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
         </div>
       </section>
 
