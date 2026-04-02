@@ -84,10 +84,10 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
               
               <h3 className="text-xl font-bold text-slate-900 mb-4">Who Needs This Treatment?</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
-                {service.symptoms?.split(",").map((symptom, i) => (
+                {service.conditions?.split(",").map((conditions, i) => (
                   <li key={i} className="flex items-start space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <CheckCircle2 size={18} className="text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-medium text-slate-700">{symptom.trim()}</span>
+                    <span className="text-sm font-medium text-slate-700">{conditions.trim()}</span>
                   </li>
                 ))}
               </ul>
