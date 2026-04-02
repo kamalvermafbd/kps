@@ -94,7 +94,7 @@ export default function App() {
 />
 </button>
 <div
-  className={`absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 transition-all duration-200 p-4 ${
+  className={`absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 transition-all duration-200 origin-top p-4 ${
     isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
   }`}
 >
