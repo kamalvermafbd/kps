@@ -95,7 +95,7 @@ export default function Home({ services }: HomeProps) {
 
 {/* Intro Video Section */}
 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-24">
-  <<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
     {/* Video */}
     <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
    <div className="aspect-video lg:h-[520px]">
