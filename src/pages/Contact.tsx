@@ -33,7 +33,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-900 mb-1">Call Us</h4>
-                <p className="text-slate-600">+91 98765 43210</p>
+                <p className="text-slate-600">+91 98106 81140</p>
                 <p className="text-sm text-blue-600 font-medium mt-1">Mon-Sat, 9am - 8pm</p>
               </div>
             </div>
