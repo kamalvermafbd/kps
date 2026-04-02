@@ -112,6 +112,72 @@ export default function Home({ services }: HomeProps) {
         </div>
       </section>
 
+
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+  <div className="text-center mb-10">
+    <h3 className="text-3xl font-bold text-slate-900">
+      Loved by Our Patients
+    </h3>
+    <p className="text-slate-600 mt-2">
+      Real recovery stories from orthopedic, sports, and pain rehabilitation patients
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {[
+      {
+        initials: "RS",
+        name: "Rahul Sharma",
+        role: "Back Pain Recovery - Faridabad",
+        text: "The best physiotherapy experience in Faridabad. My chronic back pain is finally gone after 2 years."
+      },
+      {
+        initials: "NV",
+        name: "Neha Verma",
+        role: "Knee Rehab Patient",
+        text: "Very professional sessions and fast recovery support. Highly recommended."
+      },
+      {
+        initials: "AG",
+        name: "Amit Gupta",
+        role: "Sports Injury Rehab",
+        text: "Excellent treatment plan and great exercise guidance from the team."
+      },
+      {
+        initials: "SV",
+        name: "Sneha Verma",
+        role: "Post Surgery Rehab",
+        text: "The clinic gave me confidence and helped me recover faster than expected."
+      }
+    ].map((review, i) => (
+      <div
+        key={i}
+        className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+      >
+        <div className="flex items-center space-x-2 mb-4">
+          {[1, 2, 3, 4, 5].map(n => (
+            <Star key={n} size={16} className="text-yellow-400 fill-yellow-400" />
+          ))}
+        </div>
+
+        <p className="text-slate-700 text-lg leading-relaxed mb-8">
+          "{review.text}"
+        </p>
+
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+            {review.initials}
+          </div>
+          <div>
+            <h4 className="font-semibold text-slate-900">{review.name}</h4>
+            <p className="text-sm text-slate-500">{review.role}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+      
       {/* Why Choose Us */}
       <section className="bg-slate-50 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -153,15 +219,7 @@ export default function Home({ services }: HomeProps) {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl border border-slate-100 max-w-xs">
-              <div className="flex items-center space-x-2 mb-4">
-                {[1, 2, 3, 4, 5].map(n => <Star key={n} size={16} className="text-yellow-400 fill-yellow-400" />)}
-              </div>
-              <p className="text-sm italic text-slate-600 mb-4">
-                "The best physiotherapy experience in Faridabad. My chronic back pain is finally gone after 2 years."
-              </p>
-              <p className="text-sm font-bold text-slate-900">— Rahul Sharma, Patient</p>
-            </div>
+
           </div>
         </div>
       </section>
