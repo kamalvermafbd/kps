@@ -123,7 +123,43 @@ export default function Home({ services }: HomeProps) {
     </p>
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  
+      
+      {/* Why Choose Us */}
+      <section className="bg-slate-50 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Why KRP Healthcare</h2>
+              <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">
+                The Gold Standard in Physiotherapy
+              </h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Our clinic in Sector 16 Faridabad is equipped with state-of-the-art rehabilitation technology and staffed by senior specialists.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                { title: "Evidence-Based Practice", desc: "We use the latest clinical research to design your treatment plan." },
+                { title: "Personalized Care", desc: "One-on-one sessions tailored to your specific goals and lifestyle." },
+                { title: "Modern Technology", desc: "Advanced modalities for faster recovery and pain relief." },
+              ].map((item, i) => (
+                <div key={i} className="flex space-x-4">
+                  <div className="shrink-0 w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600">
+                    <CheckCircle2 size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                    <p className="text-slate-600 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     {[
       {
         initials: "RS",
@@ -177,39 +213,6 @@ export default function Home({ services }: HomeProps) {
     ))}
   </div>
 </div>
-      
-      {/* Why Choose Us */}
-      <section className="bg-slate-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Why KRP Healthcare</h2>
-              <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                The Gold Standard in Physiotherapy
-              </h3>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our clinic in Sector 16 Faridabad is equipped with state-of-the-art rehabilitation technology and staffed by senior specialists.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {[
-                { title: "Evidence-Based Practice", desc: "We use the latest clinical research to design your treatment plan." },
-                { title: "Personalized Care", desc: "One-on-one sessions tailored to your specific goals and lifestyle." },
-                { title: "Modern Technology", desc: "Advanced modalities for faster recovery and pain relief." },
-              ].map((item, i) => (
-                <div key={i} className="flex space-x-4">
-                  <div className="shrink-0 w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center text-blue-600">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
           <div className="relative">
             <div className="aspect-square bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
               <img 
