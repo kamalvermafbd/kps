@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { apiGet } from "./lib/api";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { 
@@ -30,11 +31,13 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch("/api/services")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
-
+  apiGet("getServices").then((data) => {
+    if (data.success) {
+      setServices(data.services);
+    }
+  });
+}, []);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
@@ -69,7 +72,7 @@ export default function App() {
                       to={`/services/${s.slug}`}
                       className="block p-2 text-sm hover:bg-blue-50 rounded-lg transition-colors"
                     >
-                      {s.service_name}
+                      {s.name}
                     </Link>
                   ))}
                 </div>
@@ -114,7 +117,7 @@ export default function App() {
                     to={`/services/${s.slug}`}
                     className="block text-lg font-medium text-slate-700"
                   >
-                    {s.service_name}
+                    {s.name}
                   </Link>
                 ))}
               </div>
@@ -172,7 +175,7 @@ export default function App() {
               {services.slice(0, 4).map(s => (
                 <li key={s.slug}>
                   <Link to={`/services/${s.slug}`} className="hover:text-blue-400 transition-colors">
-                    {s.service_name}
+                    {s.name}
                   </Link>
                 </li>
               ))}
