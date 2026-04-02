@@ -165,7 +165,10 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     {service.why_choose?.split("|").map((item, i) => (
       <div className="flex items-center space-x-3 bg-blue-50 p-4 rounded-xl border border-blue-100">
-        <span className="text-sm font-semibold text-slate-700">{item}</span>
+        <>
+  <CheckCircle2 size={18} className="text-blue-600" />
+  <span className="text-sm font-medium text-slate-700">{item}</span>
+</>
       </div>
     ))}
   </div>
