@@ -186,7 +186,7 @@ const [imageLoaded, setImageLoaded] = React.useState(false);
 
 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
   {!imageLoaded && (
-    <div className="absolute inset-0 animate-pulse bg-slate-200" />
+    <div className="absolute inset-0 animate-pulse bg-slate-300" />
   )}
 
   <img
