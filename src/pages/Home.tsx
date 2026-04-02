@@ -110,9 +110,6 @@ export default function Home({ services }: HomeProps) {
             <ServiceCard key={service.slug} service={service} index={index} />
           ))}
         </div>
-      </section>
-
-
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
   <div className="text-center mb-10">
     <h3 className="text-3xl font-bold text-slate-900">
@@ -213,6 +210,13 @@ export default function Home({ services }: HomeProps) {
     ))}
   </div>
 </div>
+
+
+
+        
+      </section>
+
+
           <div className="relative">
             <div className="aspect-square bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
               <img 
