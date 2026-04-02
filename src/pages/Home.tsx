@@ -152,6 +152,24 @@ export default function Home({ services }: HomeProps) {
   </div>
 </section>
 
+
+
+
+      {/* Highlight Video 2 */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 max-w-5xl mx-auto">
+          <div className="aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/qeCmfpvyg5k"
+              title="KRP Healthcare Highlight"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+      
       
       {/* Services Grid */}
       <section id="services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
