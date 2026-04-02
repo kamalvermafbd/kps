@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { apiGet } from "./lib/api";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
@@ -27,7 +27,10 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [services, setServices] = useState<Service[]>([]);
+  
+  const servicesRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
  
   useEffect(() => {
@@ -38,10 +41,26 @@ export default function App() {
   });
 }, []);
   
+ useEffect(() => {
+  window.scrollTo(0, 0);
+  setIsMenuOpen(false);
+  setIsServicesOpen(false);
+}, [location.pathname]);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-    setIsMenuOpen(false);
-  }, [location]);
+  function handleClickOutside(event: MouseEvent) {
+    if (
+      servicesRef.current &&
+      !servicesRef.current.contains(event.target as Node)
+    ) {
+      setIsServicesOpen(false);
+    }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () =>
+    document.removeEventListener("mousedown", handleClickOutside);
+}, []);
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
@@ -61,22 +80,29 @@ export default function App() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">Home</Link>
-              <div
-  className="relative group"
-  onMouseLeave={(e) => {
-    const btn = e.currentTarget.querySelector("button") as HTMLButtonElement;
-    btn?.blur();
-  }}
+             <div ref={servicesRef} className="relative">
+              <button
+  onClick={() => setIsServicesOpen(!isServicesOpen)}
+  className="text-sm font-medium hover:text-blue-600 transition-colors flex items-center"
 >
-                <button className="text-sm font-medium hover:text-blue-600 transition-colors flex items-center">
-                  Services
-                </button>
-                <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4">
+  Services
+<ChevronRight
+  size={16}
+  className={`ml-1 transition-transform ${
+    isServicesOpen ? "rotate-90" : ""
+  }`}
+/>
+</button>
+<div
+  className={`absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 transition-all duration-200 p-4 ${
+    isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+  }`}
+>
                   {services.map((s) => (
                     <Link 
   key={s.slug} 
   to={`/services/${s.slug}`}
-  onClick={(e) => e.currentTarget.blur()}
+  onClick={() => setIsServicesOpen(false)}
   className="block p-2 text-sm hover:bg-blue-50 rounded-lg transition-colors"
 >
                       {s.name}
