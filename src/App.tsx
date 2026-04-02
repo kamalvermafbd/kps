@@ -61,17 +61,24 @@ export default function App() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">Home</Link>
-              <div className="relative group">
+              <div
+  className="relative group"
+  onMouseLeave={(e) => {
+    const btn = e.currentTarget.querySelector("button") as HTMLButtonElement;
+    btn?.blur();
+  }}
+>
                 <button className="text-sm font-medium hover:text-blue-600 transition-colors flex items-center">
                   Services
                 </button>
                 <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4">
                   {services.map((s) => (
                     <Link 
-                      key={s.slug} 
-                      to={`/services/${s.slug}`}
-                      className="block p-2 text-sm hover:bg-blue-50 rounded-lg transition-colors"
-                    >
+  key={s.slug} 
+  to={`/services/${s.slug}`}
+  onClick={(e) => e.currentTarget.blur()}
+  className="block p-2 text-sm hover:bg-blue-50 rounded-lg transition-colors"
+>
                       {s.name}
                     </Link>
                   ))}
