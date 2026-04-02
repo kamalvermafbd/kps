@@ -14,7 +14,6 @@ import {
   PlayCircle
 } from "lucide-react";
 import { Service } from "../types";
-import { generateMedicalImage } from "../lib/gemini";
 import AppointmentForm from "../components/AppointmentForm";
 
 interface ServiceDetailProps {
@@ -24,14 +23,8 @@ interface ServiceDetailProps {
 export default function ServiceDetail({ services }: ServiceDetailProps) {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (service) {
-      generateMedicalImage(service.hero_image_prompt)
-        .then(setHeroImage);
-    }
-  }, [service]);
+ 
+ 
 
   if (!service) {
     return (
@@ -49,16 +42,9 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
       {/* Service Hero */}
       <section className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {heroImage ? (
-            <img 
-              src={heroImage} 
-              alt={service.service_name} 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          ) : (
-            <div className="w-full h-full bg-slate-200 animate-pulse" />
-          )}
+
+<div className="w-full h-full bg-slate-200" />
+          
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
         </div>
 
@@ -67,13 +53,13 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
             <nav className="flex items-center space-x-2 text-sm font-medium text-blue-200 mb-6">
               <Link to="/" className="hover:text-white transition-colors">Services</Link>
               <ChevronRight size={14} />
-              <span className="text-white">{service.service_name}</span>
+              <span className="text-white">{service.name}</span>
             </nav>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              {service.service_name}
+              {service.name}
             </h1>
             <p className="text-lg md:text-xl text-blue-100/90 leading-relaxed">
-              {service.short_summary}
+              {service.description}
             </p>
           </div>
         </div>
@@ -92,14 +78,14 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
             </div>
             <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
               <p className="text-lg mb-6">
-                Our {service.service_name} program in Faridabad is designed to address the root cause of your condition, not just the symptoms. We use a combination of manual therapy, advanced modalities, and therapeutic exercises to ensure a full recovery.
+                Our {service.name} program in Faridabad is designed to address the root cause of your condition, not just the symptoms. We use a combination of manual therapy, advanced modalities, and therapeutic exercises to ensure a full recovery.
               </p>
               <h3 className="text-xl font-bold text-slate-900 mb-4">Who Needs This Treatment?</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
-                {service.symptoms.map((symptom, i) => (
+                {service.symptoms?.split(",").map((symptom, i) => (
                   <li key={i} className="flex items-start space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <CheckCircle2 size={18} className="text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-medium text-slate-700">{symptom}</span>
+                    <span className="text-sm font-medium text-slate-700">{symptom.trim()}</span>
                   </li>
                 ))}
               </ul>
@@ -156,7 +142,7 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
           </section>
 
           {/* FAQs */}
-          {service.faq_json.length > 0 && (
+          {Array.isArray(service.faq_json) && service.faq_json.length > 0 && (
             <section>
               <div className="flex items-center space-x-3 mb-8">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
@@ -190,7 +176,7 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
               <p className="text-sm text-blue-100">Get treated by Faridabad's top specialists</p>
             </div>
             <div className="p-6">
-              <AppointmentForm selectedService={service.service_name} />
+              <AppointmentForm selectedService={service.name} />
             </div>
           </div>
 
@@ -207,7 +193,7 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
                 </div>
               </div>
               <p className="text-sm text-slate-400 mb-6 leading-relaxed">
-                Expert in {service.service_name} with over 15 years of clinical experience in Faridabad.
+                Expert in {service.name} with over 15 years of clinical experience in Faridabad.
               </p>
               <Link to="/contact" className="flex items-center text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors">
                 Consult with Doctor <ArrowRight size={16} className="ml-2" />
