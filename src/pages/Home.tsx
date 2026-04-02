@@ -228,7 +228,7 @@ export default function Home({ services }: HomeProps) {
        
     
       <div className="relative">
-  <div className="rounded-3xl overflow-hidden shadow-2xl bg-slate-800 text-white p-10 h-full">
+  <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-700 via-blue-800 to-slate-900 text-white p-10 h-full">
     <div className="flex flex-col md:flex-row gap-8 items-start">
       
       <img
