@@ -206,13 +206,21 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           {service.short_summary}
         </p>
         
-        <div className="flex flex-wrap gap-2 mb-8 mt-auto">
-          {service.symptoms.slice(0, 3).map((symptom, i) => (
-            <span key={i} className="bg-slate-50 text-slate-500 text-[10px] font-bold px-2 py-1 rounded-md border border-slate-100">
-              {symptom}
-            </span>
-          ))}
-        </div>
+      <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+  {(Array.isArray(service.symptoms)
+    ? service.symptoms
+    : String(service.symptoms || "").split(",")
+  )
+    .slice(0, 3)
+    .map((symptom, i) => (
+      <span
+        key={i}
+        className="bg-slate-50 text-slate-500 text-[10px] font-bold px-2 py-1 rounded-md border border-slate-100"
+      >
+        {symptom.trim()}
+      </span>
+    ))}
+</div>
 
         <Link 
           to={`/services/${service.slug}`}
