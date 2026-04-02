@@ -158,20 +158,18 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
             </div>
           </section>
 
-    <section>
+  <section>
   <h2 className="text-2xl font-bold text-slate-900 mb-6">
-    Benefits of Treatment
+    Why Choose KRP
   </h2>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {service.benefits?.split("|").map((item, i) => (
-      <div key={i} className="flex items-center space-x-3 bg-blue-50 p-4 rounded-xl">
-        <CheckCircle2 size={18} className="text-blue-600" />
-        <span className="text-sm font-medium text-slate-700">{item}</span>
+    {service.why_choose?.split("|").map((item, i) => (
+      <div key={i} className="bg-white border border-slate-100 rounded-xl p-4 shadow-sm">
+        <span className="text-sm font-semibold text-slate-700">{item}</span>
       </div>
     ))}
   </div>
 </section>
-
           <section className="bg-blue-600 text-white rounded-3xl p-8">
   <h3 className="text-2xl font-bold mb-3">Start Your Recovery Journey</h3>
   <p className="text-blue-100">{service.cta_text}</p>
