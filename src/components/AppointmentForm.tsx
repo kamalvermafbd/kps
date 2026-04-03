@@ -210,7 +210,7 @@ if (response.success) {
         </label>
       </div>
      </div>
-     <div className="pt-4 bg-white sticky bottom-0">
+     <div className="pt-5 pb-2 mt-2 bg-white sticky bottom-0 border-t border-slate-100">
       <button 
         type="submit"
         disabled={isSubmitting}
