@@ -178,20 +178,6 @@ export default function Home({ services, doctors }: HomeProps) {
 
 <LeadingCareBanner />
 
-      {/* Highlight Video 2 */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
-        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 max-w-5xl mx-auto">
-          <div className="aspect-video">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/qeCmfpvyg5k"
-              title="KRP Healthcare Highlight"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
       
       
       {/* Services Grid */}
@@ -302,6 +288,24 @@ export default function Home({ services, doctors }: HomeProps) {
           
         </div>
       </section>
+
+
+{/* Highlight Video 2 */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 max-w-5xl mx-auto">
+          <div className="aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/qeCmfpvyg5k"
+              title="KRP Healthcare Highlight"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+      
+      
 <SpecialistCareSection />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div className="text-center mb-10">
