@@ -141,12 +141,33 @@ if (response.success) {
           <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
         <input
   type="tel"
-  maxLength={10}
+  inputMode="numeric"
+  autoComplete="tel"
+  maxLength={13}
   {...register("phone", {
     onChange: (e) => {
       e.target.value = e.target.value.replace(/\D/g, "");
-    }
+    },
   })}
+  onKeyDown={(e) => {
+    const allowedKeys = [
+      "Backspace",
+      "Delete",
+      "ArrowLeft",
+      "ArrowRight",
+      "Tab",
+    ];
+
+    if (allowedKeys.includes(e.key)) return;
+    if (!/^\d$/.test(e.key)) {
+      e.preventDefault();
+    }
+  }}
+ onPaste={(e) => {
+  e.preventDefault();
+  const pasted = e.clipboardData.getData("text").replace(/\D/g, "");
+  document.execCommand("insertText", false, pasted);
+}}
   onBlur={handleMobileBlur}
   placeholder="Mobile number"
   className={cn(
