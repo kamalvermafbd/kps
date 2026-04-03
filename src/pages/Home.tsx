@@ -31,23 +31,28 @@ interface HomeProps {
   doctors: Doctor[];
 }
 export default function Home({ services, doctors }: HomeProps) {
- const heroImage = "https://picsum.photos/seed/krp-clinic/1600/900";
+ 
 
   return (
     <div className="space-y-24 pb-24">
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {heroImage ? (
-            <img 
-              src={heroImage} 
-              alt="KRP Healthcare Clinic" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          ) : (
-            <div className="w-full h-full bg-slate-200 animate-pulse" />
-          )}
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover"
+>
+  <source
+    src="https://videos.pexels.com/video-files/6998161/6998161-hd_1920_1080_25fps.mp4"
+    type="video/mp4"
+  />
+</video>
+
+          
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/60 to-transparent" />
         </div>
 
