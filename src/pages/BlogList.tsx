@@ -95,18 +95,17 @@ const [loading, setLoading] = React.useState<boolean>(true);
         {selectedBlog.title}
       </h2>
 
-      <div className="space-y-6 mb-10">
-
-        <div>
-    <h3 className="text-xl font-bold mb-2">Common Causes</h3>
-    <p className="text-slate-600">{selectedBlog.causes}</p>
-  </div>
-</div>
-       <div>
+<div className="mb-10">
+  <div className="mb-8">
     <h3 className="text-xl font-bold mb-2">Symptoms</h3>
     <p className="text-slate-600">{selectedBlog.symptoms}</p>
   </div>
 
+  <div className="mb-2">
+    <h3 className="text-xl font-bold mb-2">Common Causes</h3>
+    <p className="text-slate-600">{selectedBlog.causes}</p>
+  </div>
+</div>
  
 
       <div className="space-y-6">
