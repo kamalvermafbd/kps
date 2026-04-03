@@ -192,6 +192,29 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
     ))}
   </div>
 </section>
+
+          
+<div className="rounded-3xl bg-gradient-to-r from-[#1e3a5f] via-[#2f4f6f] to-[#27466b] p-8 mt-12">
+  <h3 className="text-2xl font-bold text-white mb-3">
+    Need Expert Guidance Before Booking?
+  </h3>
+  <p className="text-blue-100 mb-6 leading-relaxed">
+    Chat directly with our senior physiotherapy specialist and get quick guidance
+    for your condition before booking your session.
+  </p>
+
+  <a
+    href={`https://wa.me/919810681140?text=Hi Doctor, I need help regarding ${service.name}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform"
+  >
+    Talk to Doctor First
+  </a>
+</div>
+
+          
+          
           <section className="bg-blue-600 text-white rounded-3xl p-8">
   <h3 className="text-2xl font-bold mb-3">Start Your Recovery Journey</h3>
   <p className="text-blue-100">{service.cta_text}</p>
