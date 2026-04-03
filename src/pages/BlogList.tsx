@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { apiGet } from "../lib/api";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 export default function BlogList() {
 const [blogs, setBlogs] = React.useState<any[]>([]);
 const [loading, setLoading] = React.useState<boolean>(true);
+ 
  React.useEffect(() => {
   apiGet("getBlogs")
     .then((data) => {
