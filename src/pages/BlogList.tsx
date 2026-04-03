@@ -71,7 +71,7 @@ const [loading, setLoading] = React.useState<boolean>(true);
                 Read More <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>
-          </motion.article>
+          </article>
         ))}
             </div>
       )}
