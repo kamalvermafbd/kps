@@ -25,7 +25,7 @@ import About from "./pages/About";
 import ServiceDetail from "./pages/ServiceDetail";
 import BlogList from "./pages/BlogList";
 import Contact from "./pages/Contact";
-
+ 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
