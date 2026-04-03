@@ -260,27 +260,8 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
             </div>
           </div>
 
-          {/* Doctor Info */}
-          <div className="bg-slate-900 rounded-3xl p-6 text-white overflow-hidden relative">
-            <div className="relative z-10">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl overflow-hidden">
-                  <img src="https://picsum.photos/seed/doctor/200/200" alt="Dr. K.R. Prasad" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                </div>
-                <div>
-                  <h4 className="font-bold">Dr. K.R. Prasad</h4>
-                  <p className="text-xs text-blue-400">Senior Physiotherapist</p>
-                </div>
-              </div>
-              <p className="text-sm text-slate-400 mb-6 leading-relaxed">
-                Expert in {service.name} with over 15 years of clinical experience in Faridabad.
-              </p>
-              <Link to="/contact" className="flex items-center text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors">
-                Consult with Doctor <ArrowRight size={16} className="ml-2" />
-              </Link>
-            </div>
-            <Activity size={100} className="absolute -bottom-10 -right-10 text-white/5" />
-          </div>
+
+          
         </div>
       </div>
     </div>
