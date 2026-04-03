@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { apiGet } from "../lib/api";
 import { Calendar, ChevronRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
