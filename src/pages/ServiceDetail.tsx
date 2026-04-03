@@ -214,10 +214,13 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
 </div>
 
           
-          
-          <section className="bg-blue-600 text-white rounded-3xl p-8">
-  <h3 className="text-2xl font-bold mb-3">Start Your Recovery Journey</h3>
-  <p className="text-blue-100">{service.cta_text}</p>
+          <section className="bg-white border border-blue-100 shadow-sm rounded-3xl p-8">
+  <h3 className="text-2xl font-bold mb-3 text-slate-900">
+    Start Your Recovery Journey
+  </h3>
+  <p className="text-slate-600 leading-relaxed">
+    {service.cta_text}
+  </p>
 </section>
 
           
