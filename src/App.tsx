@@ -296,7 +296,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
 
       {/* Floating WhatsApp */}
       <a 
-        href="https://wa.me/919810681140" 
+        href="https://wa.me/919810681140?text=Hi%20Doctor,%20I%20need%20guidance%20regarding%20my%20treatment."
         target="_blank" 
         rel="noopener noreferrer"
          aria-label="Chat with Doctor"
