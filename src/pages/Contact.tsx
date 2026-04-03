@@ -60,7 +60,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100 p-8 md:p-12">
+        <div 
+           id="appointment"
+          className="bg-white rounded-3xl shadow-2xl shadow-slate-200/50 border border-slate-100 p-8 md:p-12">
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Book Appointment</h2>
             <p className="text-sm text-slate-500">Fill out the form below and we'll get back to you.</p>
