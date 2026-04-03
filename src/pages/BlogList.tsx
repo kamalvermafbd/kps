@@ -78,19 +78,29 @@ const [loading, setLoading] = React.useState<boolean>(true);
 {selectedBlog && (
   <div className="fixed inset-0 z-50 bg-black/60 flex items-start justify-center overflow-y-auto p-4 pt-20">
     <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
-      <button
-        onClick={() => setSelectedBlog(null)}
-        className="absolute top-6 right-6 text-4xl font-bold text-slate-600 hover:text-slate-900"
-      >
-        ×
-      </button>
+      <div className="relative mb-8 pt-4 pr-4">
+  <button
+    onClick={() => setSelectedBlog(null)}
+    className="absolute top-0 right-0 z-20
+               h-11 w-11 rounded-full
+               bg-white/95 backdrop-blur-md
+               border border-slate-200
+               shadow-lg
+               flex items-center justify-center
+               text-2xl font-bold text-slate-700
+               hover:text-slate-900
+               hover:scale-105
+               transition-all duration-300"
+  >
+    ×
+  </button>
 
-      <img
-        src={selectedBlog.image}
-        alt={selectedBlog.title}
-        className="w-full h-64 object-cover rounded-2xl mb-6"
-      />
-
+  <img
+    src={selectedBlog.image}
+    alt={selectedBlog.title}
+    className="w-full h-64 object-cover rounded-2xl mt-5"
+  />
+</div>
       <h2 className="text-3xl font-bold text-slate-900 mb-4">
         {selectedBlog.title}
       </h2>
