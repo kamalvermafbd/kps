@@ -287,7 +287,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
           <Phone size={18} className="mr-2" /> Call Now
         </a>
         <Link 
-          to="/contact" 
+           to="/contact#appointment"
           className="flex-[2] bg-blue-600 text-white py-3 rounded-xl flex items-center justify-center font-bold text-sm shadow-lg shadow-blue-200"
         >
           Book Consultation
