@@ -80,7 +80,7 @@ const [loading, setLoading] = React.useState<boolean>(true);
     <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
       <button
         onClick={() => setSelectedBlog(null)}
-        className="absolute top-4 right-4 text-2xl text-slate-500"
+        className="absolute top-6 right-6 text-4xl font-bold text-slate-600 hover:text-slate-900"
       >
         ×
       </button>
