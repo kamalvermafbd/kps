@@ -299,7 +299,8 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
         href="https://wa.me/919810681140" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-20 right-6 md:bottom-8 md:right-8 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+         aria-label="Chat with Doctor"
+        className="fixed bottom-20 right-6 md:bottom-8 md:right-8 z-50 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
       >
         <MessageSquare size={30} fill="currentColor" />
       </a>
