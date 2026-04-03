@@ -321,16 +321,24 @@ if (response.success) {
       </div>
 
       <div className="flex items-center space-x-2 ml-1">
-        <input 
-          type="checkbox" 
-          id="whatsapp" 
-          {...register("whatsappConsent")}
-          className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
-        />
-        <label htmlFor="whatsapp" className="text-[10px] font-medium text-slate-500">
-          I consent to receive updates on WhatsApp
-        </label>
-      </div>
+  <input
+    type="checkbox"
+    id="whatsapp"
+    {...register("whatsappConsent")}
+    onChange={(e) => {
+      console.log("checkbox checked =>", e.target.checked);
+      console.log("checkbox value =>", e.target.value);
+      console.log("checkbox typeof checked =>", typeof e.target.checked);
+    }}
+    className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+  />
+  <label
+    htmlFor="whatsapp"
+    className="text-[10px] font-medium text-slate-500"
+  >
+    I consent to receive updates on WhatsApp
+  </label>
+</div>
     
      
       <button 
