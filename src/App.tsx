@@ -28,7 +28,8 @@ import Contact from "./pages/Contact";
  
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+ const [isDesktopServicesOpen, setIsDesktopServicesOpen] = useState(false);
+const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
  const [services, setServices] = useState<Service[]>([]);
 const [doctors, setDoctors] = useState([]);
   
@@ -54,7 +55,8 @@ useEffect(() => {
  useEffect(() => {
   window.scrollTo(0, 0);
   setIsMenuOpen(false);
-  setIsServicesOpen(false);
+  setIsDesktopServicesOpen(false);
+setIsMobileServicesOpen(false);
 }, [location.pathname]);
 
   useEffect(() => {
@@ -63,7 +65,7 @@ useEffect(() => {
       servicesRef.current &&
       !servicesRef.current.contains(event.target as Node)
     ) {
-      setIsServicesOpen(false);
+      setIsDesktopServicesOpen(false);
     }
   }
 
@@ -94,8 +96,8 @@ useEffect(() => {
              <div
   ref={servicesRef}
   className="relative"
-  onMouseEnter={() => setIsServicesOpen(true)}
-  onMouseLeave={() => setIsServicesOpen(false)}
+  onMouseEnter={() => setIsDesktopServicesOpen(true)}
+onMouseLeave={() => setIsDesktopServicesOpen(false)}
 >
               <button
   className="text-sm font-medium hover:text-blue-600 transition-colors flex items-center"
@@ -104,20 +106,20 @@ useEffect(() => {
 <ChevronRight
   size={16}
   className={`ml-1 transition-transform ${
-    isServicesOpen ? "rotate-90" : ""
+    isDesktopServicesOpen ? "rotate-90" : ""
   }`}
 />
 </button>
 <div
   className={`absolute top-full left-0 w-64 bg-white shadow-xl rounded-xl border border-slate-100 transition-all duration-200 origin-top p-4 ${
-    isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+    isDesktopServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
   }`}
 >
                   {services.map((s) => (
                     <Link 
   key={s.slug} 
   to={`/services/${s.slug}`}
-  onClick={() => setIsServicesOpen(false)}
+  onClick={() => setIsDesktopServicesOpen(false)}
   className="block p-2 text-sm hover:bg-blue-50 rounded-lg transition-colors"
 >
                       {s.name}
@@ -160,19 +162,19 @@ useEffect(() => {
               <Link to="/about" className="text-lg font-semibold border-b border-slate-100 pb-4">About Us</Link>
            <div className="space-y-3">
   <button
-    onClick={() => setIsServicesOpen(!isServicesOpen)}
+    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
     className="w-full flex items-center justify-between text-lg font-semibold border-b border-slate-100 pb-4"
   >
     <span>Our Services</span>
     <ChevronRight
       size={18}
       className={`transition-transform ${
-        isServicesOpen ? "rotate-90" : ""
+        isMobileServicesOpen ? "rotate-90" : ""
       }`}
     />
   </button>
 
-  {isServicesOpen && (
+  {isMobileServicesOpen && (
     <div className="space-y-3 pl-4 border-l border-slate-200">
       {services.map((s) => (
         <Link
@@ -180,7 +182,7 @@ useEffect(() => {
           to={`/services/${s.slug}`}
           onClick={() => {
             setIsMenuOpen(false);
-            setIsServicesOpen(false);
+            setIsMobileServicesOpen(false);
           }}
           className="block text-[15px] font-medium text-slate-600 leading-6 hover:text-blue-600 transition-colors"
         >
