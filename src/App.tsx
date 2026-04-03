@@ -28,7 +28,8 @@ import Contact from "./pages/Contact";
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [services, setServices] = useState<Service[]>([]);
+ const [services, setServices] = useState<Service[]>([]);
+const [doctors, setDoctors] = useState([]);
   
   const servicesRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -37,6 +38,14 @@ export default function App() {
   apiGet("getServices").then((data) => {
     if (data.success) {
       setServices(data.services);
+    }
+  });
+}, []);
+
+useEffect(() => {
+  apiGet("getDoctors").then((data) => {
+    if (data.success) {
+      setDoctors(data.doctors || []);
     }
   });
 }, []);
@@ -189,7 +198,7 @@ export default function App() {
 
       <main className="pt-20">
         <Routes>
-          <Route path="/" element={<Home services={services} />} />
+          <Route path="/" element={<Home services={services} doctors={doctors} />} />
           <Route path="/services/:slug" element={<ServiceDetail services={services} />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/contact" element={<Contact />} />
