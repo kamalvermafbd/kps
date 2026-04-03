@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 export default function BlogDetail() {
   return (
     <div className="max-w-4xl mx-auto py-24 px-4">
