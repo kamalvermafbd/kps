@@ -59,7 +59,7 @@ export default function About({ doctors }: AboutProps) {
                 <img
                   src={doctor.image_url}
                   alt={doctor.doctor_name}
-                  className="w-full h-64 object-cover"
+                  className="w-full aspect-[4/5] object-cover object-top"
                 />
               )}
 
