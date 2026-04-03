@@ -40,10 +40,15 @@ const [services, setServices] = React.useState<any[]>([]);
 
 React.useEffect(() => {
   apiGet("getServices").then((res) => {
-    if (res.success) {
-      setServices(res.services || []);
-    }
-  });
+  console.log("getServices response =>", res);
+
+  if (res.success) {
+    const loadedServices = res.services || [];
+    console.log("loadedServices =>", loadedServices);
+
+    setServices(loadedServices);
+  }
+});
 
   apiGet("getClinicInfo").then((res) => {
     if (res.success) {
@@ -171,13 +176,16 @@ if (response.success) {
   <select
     {...register("service")}
 
-    onChange={(e) => {
-  const value = e.target.value;
-  setValue("service", value);
+    apiGet("getServices").then((res) => {
+  console.log("getServices response =>", res);
 
-  const selected = services.find((s) => s.name === value);
-  setSelectedCharge(Number(selected?.charges || 0));
-}}
+  if (res.success) {
+    const loadedServices = res.services || [];
+    console.log("loadedServices =>", loadedServices);
+
+    setServices(loadedServices);
+  }
+});
     
     className={cn(
       "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
@@ -197,7 +205,7 @@ if (response.success) {
     </p>
   )}
 </div>
-      
+      {console.log("selectedCharge render =>", selectedCharge)}
 {selectedCharge > 0 && (
   <p className="text-sm font-bold text-red-600 ml-1">
     Consultation Charges: ₹{selectedCharge}
