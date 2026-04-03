@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { apiGet } from "../lib/api";
-import { Calendar, ChevronRight, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
@@ -44,7 +44,7 @@ const [loading, setLoading] = React.useState(true);
             transition={{ delay: i * 0.1 }}
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all"
           >
-            <div className="h-64 overflow-hidden bg-white p-4 border-b border-slate-100">
+            <div className="h-48 sm:h-56 lg:h-64 overflow-hidden bg-white p-4 border-b border-slate-100">
   <img
     src={blog.image}
     alt={blog.title}
