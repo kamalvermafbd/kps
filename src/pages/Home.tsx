@@ -77,7 +77,7 @@ export default function Home({ services, doctors }: HomeProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                to="/contact" 
+                  to="/contact#appointment"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-blue-900/40 flex items-center justify-center"
               >
                 Book Consultation <ArrowRight size={20} className="ml-2" />
