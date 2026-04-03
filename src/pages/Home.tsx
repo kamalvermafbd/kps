@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import LeadingCareBanner from "../components/LeadingCareBanner";
 import SpecialistCareSection from "../components/SpecialistCareSection";
 import { Link } from "react-router-dom";
 import { 
@@ -175,7 +176,7 @@ export default function Home({ services, doctors }: HomeProps) {
 </section>
 
 
-
+<LeadingCareBanner />
 
       {/* Highlight Video 2 */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
