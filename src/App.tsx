@@ -33,7 +33,7 @@ export default function App() {
 const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
  const [services, setServices] = useState<Service[]>([]);
 const [doctors, setDoctors] = useState([]);
-  
+   
   const servicesRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
  
