@@ -80,10 +80,11 @@ if (response.success) {
   }
 
   return (
-    <form
+   <form
   onSubmit={handleSubmit(onSubmit)}
-  className="space-y-4 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar"
+  className="flex flex-col max-h-[70vh]"
 >
+     <div className="flex-1 overflow-y-auto pr-2 pl-1 space-y-4 custom-scrollbar">
       <div className="space-y-1">
         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Full Name</label>
         <div className="relative">
@@ -208,7 +209,8 @@ if (response.success) {
           I consent to receive updates on WhatsApp
         </label>
       </div>
-
+     </div>
+     <div className="pt-4 bg-white sticky bottom-0">
       <button 
         type="submit"
         disabled={isSubmitting}
@@ -216,6 +218,7 @@ if (response.success) {
       >
         {isSubmitting ? "Processing..." : "Confirm Appointment"}
       </button>
+     </div>
     </form>
   );
 }
