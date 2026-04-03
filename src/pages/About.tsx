@@ -24,10 +24,6 @@ export default function About({ doctors }: AboutProps) {
             About KRP Health Care
           </h2>
 
-          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6 leading-tight">
-            Compassionate Care. Expert Team. Complete Healing.
-          </h3>
-
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
             KRP Health Care is dedicated to transforming lives through compassionate,
             personalized, and comprehensive healthcare services. Our mission is to
@@ -47,6 +43,47 @@ export default function About({ doctors }: AboutProps) {
             specialist consultations, we focus on building trust, confidence,
             and long-lasting recovery for every patient we serve.
           </p>
+
+
+          <div className="mt-10 rounded-[32px] border border-blue-100 bg-slate-50 p-8 md:p-10">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 relative">
+    
+    {/* connector line */}
+    <div className="hidden md:block absolute top-1/2 left-[16%] right-[16%] h-[2px] bg-blue-100 -translate-y-1/2" />
+
+    {[
+      {
+        title: "Compassionate Care",
+        desc: "Personalized care focused on comfort, trust, and safety.",
+      },
+      {
+        title: "Expert Team",
+        desc: "Senior specialists working together for complete wellness.",
+      },
+      {
+        title: "Complete Healing",
+        desc: "Recovery, prevention, and long-term patient confidence.",
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="relative z-10 bg-white border border-blue-100 rounded-3xl p-6 text-center shadow-sm mx-0 md:mx-3"
+      >
+        <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+          0{i + 1}
+        </div>
+
+        <h3 className="text-xl font-bold text-slate-900 mb-3">
+          {item.title}
+        </h3>
+
+        <p className="text-slate-600 leading-relaxed">
+          {item.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
