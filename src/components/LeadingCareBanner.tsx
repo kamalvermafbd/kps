@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function LeadingCareBanner() {
@@ -29,12 +28,12 @@ export default function LeadingCareBanner() {
               help you recover faster and feel better, both physically and mentally.
             </p>
 
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg"
-            >
-              Explore More <ArrowRight size={18} className="ml-2" />
-            </Link>
+           <a
+  href="#services"
+  className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg"
+>
+  Explore More <ArrowRight size={18} className="ml-2" />
+</a>
           </div>
 
           {/* Right Image */}
