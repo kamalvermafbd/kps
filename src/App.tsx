@@ -24,6 +24,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ServiceDetail from "./pages/ServiceDetail";
 import BlogList from "./pages/BlogList";
+import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
  
 export default function App() {
@@ -221,6 +222,8 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
           <Route path="/about" element={<About doctors={doctors} />} />
           <Route path="/services/:slug" element={<ServiceDetail services={services} />} />
           <Route path="/blog" element={<BlogList />} />
+          
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
