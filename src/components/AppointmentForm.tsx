@@ -28,6 +28,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
   const [isSuccess, setIsSuccess] = React.useState(false);
 const [services, setServices] = React.useState<any[]>([]);
   const [clinic, setClinic] = React.useState<any>(null);
+  const [selectedCharge, setSelectedCharge] = React.useState<number>(0);
   const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -168,6 +169,12 @@ if (response.success) {
   </label>
   <select
     {...register("service")}
+
+    onChange={(e) => {
+    const selected = services.find((s) => s.name === e.target.value);
+    setSelectedCharge(Number(selected?.charges || 0));
+  }}
+    
     className={cn(
       "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
       errors.service && "border-red-300 bg-red-50"
@@ -187,7 +194,11 @@ if (response.success) {
   )}
 </div>
       
-
+{selectedCharge > 0 && (
+  <p className="text-sm font-bold text-red-600 ml-1">
+    Consultation Charges: ₹{selectedCharge}
+  </p>
+)}
 
       
       <div className="grid grid-cols-2 gap-4">
