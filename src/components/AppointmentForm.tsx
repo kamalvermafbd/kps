@@ -76,6 +76,7 @@ const handleMobileBlur = async () => {
 if (response.success) {
   setIsSuccess(true);
   reset();
+  setSelectedCharge(0);
 }
     } catch (error) {
       console.error("Booking failed:", error);
