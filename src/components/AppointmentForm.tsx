@@ -27,6 +27,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
 const [services, setServices] = React.useState<any[]>([]);
+  const [clinic, setClinic] = React.useState<any>(null);
   const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,6 +41,12 @@ React.useEffect(() => {
   apiGet("getServices").then((res) => {
     if (res.success) {
       setServices(res.services || []);
+    }
+  });
+
+  apiGet("getClinicInfo").then((res) => {
+    if (res.success) {
+      setClinic(res.clinic);
     }
   });
 }, []);
@@ -84,7 +91,7 @@ if (response.success) {
         </div>
         <h3 className="text-xl font-bold text-slate-900">Booking Received!</h3>
         <p className="text-slate-600 text-sm">
-          Our team will contact you shortly to confirm your appointment at Sector 16, Faridabad.
+          Our team will contact you shortly to confirm your appointment at {clinic?.address || "our clinic"}.
         </p>
         <button 
           onClick={() => setIsSuccess(false)}
@@ -111,7 +118,7 @@ if (response.success) {
           <input 
             {...register("phone")}
             onBlur={handleMobileBlur}
-            placeholder="98106 81140"
+            placeholder="Mobile number"
             className={cn(
               "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
               errors.phone && "border-red-300 bg-red-50"
