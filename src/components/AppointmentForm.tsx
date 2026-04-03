@@ -7,7 +7,24 @@ import { Calendar, Phone, User, MessageSquare, Clock, CheckCircle2 } from "lucid
 import { cn } from "../lib/utils";
 
 const formSchema = z.object({
-  phone: z.string().min(10, "Valid phone number is required"),
+phone: z
+  .string()
+  .transform((val) => {
+    let cleaned = val.replace(/\D/g, "");
+
+    // remove leading zero(s)
+    cleaned = cleaned.replace(/^0+/, "");
+
+    // remove India country code if present
+    if (cleaned.startsWith("91") && cleaned.length > 10) {
+      cleaned = cleaned.slice(2);
+    }
+
+    return cleaned;
+  })
+  .refine((val) => /^[6-9]\d{9}$/.test(val), {
+    message: "Enter valid Indian mobile number",
+  }),
   email: z.string().email("Valid email is required").optional().or(z.literal("")),
   name: z.string().min(2, "Name is required"),
   service: z.string().min(1, "Please select a service"),
@@ -122,15 +139,21 @@ if (response.success) {
         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Phone Number</label>
         <div className="relative">
           <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input 
-            {...register("phone")}
-            onBlur={handleMobileBlur}
-            placeholder="Mobile number"
-            className={cn(
-              "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
-              errors.phone && "border-red-300 bg-red-50"
-            )}
-          />
+        <input
+  type="tel"
+  maxLength={10}
+  {...register("phone", {
+    onChange: (e) => {
+      e.target.value = e.target.value.replace(/\D/g, "");
+    }
+  })}
+  onBlur={handleMobileBlur}
+  placeholder="Mobile number"
+  className={cn(
+    "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+    errors.phone && "border-red-300 bg-red-50"
+  )}
+/>
         </div>
         {errors.phone && <p className="text-[10px] text-red-500 font-bold ml-1">{errors.phone.message}</p>}
       </div>
