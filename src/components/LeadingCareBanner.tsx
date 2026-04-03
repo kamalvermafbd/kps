@@ -46,10 +46,7 @@ export default function LeadingCareBanner() {
   className="w-full h-[420px] object-cover"
   referrerPolicy="no-referrer"
 />
-                alt="Physiotherapy care"
-                className="w-full h-[420px] object-cover"
-                referrerPolicy="no-referrer"
-              />
+                
             </div>
           </div>
         </div>
