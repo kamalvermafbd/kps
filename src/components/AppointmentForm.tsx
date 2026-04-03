@@ -80,7 +80,10 @@ if (response.success) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form
+  onSubmit={handleSubmit(onSubmit)}
+  className="space-y-4 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar"
+>
       <div className="space-y-1">
         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Full Name</label>
         <div className="relative">
