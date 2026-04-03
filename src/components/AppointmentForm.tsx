@@ -25,7 +25,7 @@ interface AppointmentFormProps {
 export default function AppointmentForm({ selectedService }: AppointmentFormProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
-
+const [services, setServices] = React.useState<any[]>([]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,6 +35,14 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
     }
   });
 
+React.useEffect(() => {
+  apiGet("getServices").then((res) => {
+    if (res.success) {
+      setServices(res.services || []);
+    }
+  });
+}, []);
+      
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
@@ -105,6 +113,37 @@ if (response.success) {
         {errors.phone && <p className="text-[10px] text-red-500 font-bold ml-1">{errors.phone.message}</p>}
       </div>
 
+
+
+{/* ✅ Service Dropdown yaha paste */}
+<div className="space-y-1">
+  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">
+    Service
+  </label>
+  <select
+    {...register("service")}
+    className={cn(
+      "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+      errors.service && "border-red-300 bg-red-50"
+    )}
+  >
+    <option value="">Select Service</option>
+    {services.map((s) => (
+      <option key={s.slug} value={s.name}>
+        {s.name}
+      </option>
+    ))}
+  </select>
+  {errors.service && (
+    <p className="text-[10px] text-red-500 font-bold ml-1">
+      {errors.service.message}
+    </p>
+  )}
+</div>
+      
+
+
+      
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-1">
           <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Date</label>
