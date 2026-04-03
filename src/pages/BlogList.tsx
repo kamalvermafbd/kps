@@ -1,12 +1,12 @@
 import React from "react";
 import { apiGet } from "../lib/api";
 import { Calendar, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 
 export default function BlogList() {
 const [blogs, setBlogs] = React.useState<any[]>([]);
 const [loading, setLoading] = React.useState<boolean>(true);
+ const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  
  React.useEffect(() => {
   apiGet("getBlogs")
@@ -64,17 +64,54 @@ const [loading, setLoading] = React.useState<boolean>(true);
               <p className="text-slate-600 text-sm mb-6 leading-relaxed">
                 {blog.excerpt}
               </p>
-              <Link 
-                to={`/blog/${blog.slug}`}
-                className="inline-flex items-center text-sm font-bold text-blue-600"
-              >
-                Read More <ArrowRight size={16} className="ml-2" />
-              </Link>
+            <button
+  onClick={() => setSelectedBlog(blog)}
+  className="inline-flex items-center text-sm font-bold text-blue-600"
+>
+  Read More <ArrowRight size={16} className="ml-2" />
+</button>
             </div>
           </article>
         ))}
             </div>
       )}
+{selectedBlog && (
+  <div className="fixed inset-0 z-50 bg-black/60 flex items-start justify-center overflow-y-auto p-4 pt-20">
+    <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+      <button
+        onClick={() => setSelectedBlog(null)}
+        className="absolute top-4 right-4 text-2xl text-slate-500"
+      >
+        ×
+      </button>
+
+      <img
+        src={selectedBlog.image}
+        alt={selectedBlog.title}
+        className="w-full h-64 object-cover rounded-2xl mb-6"
+      />
+
+      <h2 className="text-3xl font-bold text-slate-900 mb-4">
+        {selectedBlog.title}
+      </h2>
+
+      <p className="text-slate-600 mb-6">{selectedBlog.symptoms}</p>
+
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-bold mb-2">How Physiotherapy Helps</h3>
+          <p className="text-slate-600">{selectedBlog.physio_helps}</p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold mb-2">Why Choose KRP</h3>
+          <p className="text-slate-600">{selectedBlog.krp_role}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+   
     </div>
   );
 }
