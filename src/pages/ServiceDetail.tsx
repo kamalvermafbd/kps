@@ -194,7 +194,7 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
 </section>
 
           
-<div className="rounded-3xl bg-gradient-to-r from-[#1e3a5f] via-[#2f4f6f] to-[#27466b] p-8 mt-12">
+<div className="rounded-3xl bg-gradient-to-r from-blue-600 to-blue-700 p-8 mt-12">
   <h3 className="text-2xl font-bold text-white mb-3">
     Need Expert Guidance Before Booking?
   </h3>
