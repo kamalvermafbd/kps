@@ -61,7 +61,7 @@ export default function About({ doctors }: AboutProps) {
       },
     ].map((item, i) => (
       <React.Fragment key={i}>
-        <div className="bg-white border border-blue-200 rounded-3xl p-6 md:p-7 shadow-sm text-center">
+        <div className="bg-white border border-blue-200 rounded-3xl p-6 md:p-7 shadow-sm text-center flex flex-col items-center">
           <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center mx-auto md:mx-0 mb-4 font-bold text-xl">
             0{i + 1}
           </div>
@@ -76,7 +76,7 @@ export default function About({ doctors }: AboutProps) {
         </div>
 
         {i !== 2 && (
-          <div className="h-10 flex justify-center md:justify-start md:pl-7">
+          <div className="h-10 flex justify-center">
             <div className="w-[2px] bg-blue-200 rounded-full" />
           </div>
         )}
