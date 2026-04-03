@@ -155,14 +155,14 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"
+            className="fixed inset-0 z-40 bg-white pt-24 px-6 pb-32 overflow-y-auto will-change-transform md:hidden"
           >
             <div className="flex flex-col space-y-6">
               <Link to="/" className="text-lg font-semibold border-b border-slate-100 pb-4">Home</Link>
               <Link to="/about" className="text-lg font-semibold border-b border-slate-100 pb-4">About Us</Link>
            <div className="space-y-3">
   <button
-    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+    onClick={() => setIsMobileServicesOpen(prev => !prev)}
     className="w-full flex items-center justify-between text-lg font-semibold border-b border-slate-100 pb-4"
   >
     <span>Our Services</span>
@@ -175,7 +175,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
   </button>
 
   {isMobileServicesOpen && (
-    <div className="space-y-3 pl-4 border-l border-slate-200">
+    <div className="space-y-3 pl-4 border-l border-slate-200 transition-all duration-200">
       {services.map((s) => (
         <Link
           key={s.slug}
