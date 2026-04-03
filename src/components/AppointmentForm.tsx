@@ -7,8 +7,9 @@ import { Calendar, Phone, User, MessageSquare, Clock, CheckCircle2 } from "lucid
 import { cn } from "../lib/utils";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name is required"),
   phone: z.string().min(10, "Valid phone number is required"),
+  email: z.string().email("Valid email is required").optional().or(z.literal("")),
+  name: z.string().min(2, "Name is required"),
   service: z.string().min(1, "Please select a service"),
   date: z.string().min(1, "Please select a date"),
   time: z.string().min(1, "Please select a time"),
@@ -26,7 +27,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
 const [services, setServices] = React.useState<any[]>([]);
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
+  const { register, handleSubmit, formState: { errors }, reset, setValue, watch } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       service: selectedService || "",
@@ -42,7 +43,23 @@ React.useEffect(() => {
     }
   });
 }, []);
-      
+
+const handleMobileBlur = async () => {
+  const phone = watch("phone");
+  if (!phone || phone.length < 10) return;
+
+  try {
+    const res = await apiGet("getMobileInfo", { phone });
+
+    if (res.success && res.patient) {
+      setValue("name", res.patient.name || "");
+      setValue("email", res.patient.email || "");
+    }
+  } catch (err) {
+    console.error("Mobile lookup failed", err);
+  }
+};
+  
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
@@ -85,7 +102,27 @@ if (response.success) {
   className="flex flex-col max-h-[70vh]"
 >
      <div className="flex-1 overflow-y-auto pr-2 pl-1 pb-6 space-y-4 custom-scrollbar">
+      
+
       <div className="space-y-1">
+        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Phone Number</label>
+        <div className="relative">
+          <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input 
+            {...register("phone")}
+            onBlur={handleMobileBlur}
+            placeholder="98106 81140"
+            className={cn(
+              "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+              errors.phone && "border-red-300 bg-red-50"
+            )}
+          />
+        </div>
+        {errors.phone && <p className="text-[10px] text-red-500 font-bold ml-1">{errors.phone.message}</p>}
+      </div>
+
+
+<div className="space-y-1">
         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Full Name</label>
         <div className="relative">
           <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
@@ -100,24 +137,22 @@ if (response.success) {
         </div>
         {errors.name && <p className="text-[10px] text-red-500 font-bold ml-1">{errors.name.message}</p>}
       </div>
-
-      <div className="space-y-1">
-        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Phone Number</label>
-        <div className="relative">
-          <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-          <input 
-            {...register("phone")}
-            placeholder="98106 81140"
-            className={cn(
-              "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
-              errors.phone && "border-red-300 bg-red-50"
-            )}
-          />
-        </div>
-        {errors.phone && <p className="text-[10px] text-red-500 font-bold ml-1">{errors.phone.message}</p>}
-      </div>
-
-
+       
+<div className="space-y-1">
+  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">
+    Email ID
+  </label>
+  <input
+    {...register("email")}
+    placeholder="your@email.com"
+    className="w-full bg-slate-50 border border-blue-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+  />
+  {errors.email && (
+    <p className="text-[10px] text-red-500 font-bold ml-1">
+      {errors.email.message}
+    </p>
+  )}
+</div>
 
 {/* ✅ Service Dropdown yaha paste */}
 <div className="space-y-1">
@@ -175,11 +210,11 @@ if (response.success) {
               )}
             >
               <option value="">Select</option>
-              <option value="09:00 AM">09:00 AM</option>
-              <option value="11:00 AM">11:00 AM</option>
-              <option value="02:00 PM">02:00 PM</option>
-              <option value="04:00 PM">04:00 PM</option>
-              <option value="06:00 PM">06:00 PM</option>
+              <option value="09:00:00">09:00</option>
+<option value="11:00:00">11:00</option>
+<option value="14:00:00">14:00</option>
+<option value="16:00:00">16:00</option>
+<option value="18:00:00">18:00</option>
             </select>
           </div>
         </div>
