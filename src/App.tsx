@@ -91,9 +91,13 @@ useEffect(() => {
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">Home</Link>
               <Link to="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">About Us</Link>
-             <div ref={servicesRef} className="relative">
+             <div
+  ref={servicesRef}
+  className="relative"
+  onMouseEnter={() => setIsServicesOpen(true)}
+  onMouseLeave={() => setIsServicesOpen(false)}
+>
               <button
-  onClick={() => setIsServicesOpen(!isServicesOpen)}
   className="text-sm font-medium hover:text-blue-600 transition-colors flex items-center"
 >
   Services
