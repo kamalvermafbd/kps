@@ -53,7 +53,7 @@ export default function Home({ services, doctors }: HomeProps) {
 </video>
 
           
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-blue-950/80 to-blue-950/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
