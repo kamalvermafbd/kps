@@ -45,7 +45,7 @@ export default function About({ doctors }: AboutProps) {
           </p>
 
 
-          <<div className="mt-12 rounded-[32px] border border-blue-200 bg-blue-50/40 p-8 md:p-10">
+          <div className="mt-12 rounded-[32px] border border-blue-200 bg-blue-50/40 p-8 md:p-10">
   <div className="space-y-0">
     {[
       {
