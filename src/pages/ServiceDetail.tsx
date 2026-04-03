@@ -253,7 +253,7 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
         {/* Sidebar */}
         <div className="space-y-8">
           {/* Booking Card */}
-          <div className="bg-white rounded-3xl shadow-xl shadow-blue-100/40 border border-blue-100 overflow-hidden sticky top-24">
+          <div className="bg-white rounded-3xl shadow-xl shadow-blue-100/40 border border-blue-200 overflow-hidden sticky top-24">
             <div className="bg-blue-600 p-6 text-white text-center">
               <h3 className="text-xl font-bold mb-2">Book Your Session</h3>
               <p className="text-sm text-blue-100">Get treated by Faridabad's top specialists</p>
