@@ -30,7 +30,7 @@ export default function SpecialistCareSection() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-sm font-semibold text-blue-600 tracking-[0.15em] mb-4">
           Specialist Healthcare Services
