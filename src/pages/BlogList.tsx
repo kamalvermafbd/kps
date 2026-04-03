@@ -34,7 +34,7 @@ const [loading, setLoading] = React.useState<boolean>(true);
 )}
       {!loading && (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-       {blogs.map((blog, i) => (
+      {Array.isArray(blogs) && blogs.map((blog) => (
           <article 
             key={blog.slug}
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all"
