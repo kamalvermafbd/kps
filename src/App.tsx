@@ -178,7 +178,7 @@ export default function App() {
               <Link to="/contact" className="text-lg font-semibold border-b border-slate-100 pb-4">Contact</Link>
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white w-full py-4 rounded-xl text-center font-bold shadow-xl shadow-blue-200"
+                className="hidden md:block bg-blue-600 text-white w-full py-4 rounded-xl text-center font-bold shadow-xl shadow-blue-200"
               >
                 Book Consultation
               </Link>
