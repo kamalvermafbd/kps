@@ -219,7 +219,7 @@ export default function Home({ services, doctors }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div>
-              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Why KRP Healthcare</h2>
+              <h2 className="text-sm font-bold text-blue-600 uppercase tracking-[0.2em] mb-4">Why KRP Healthcare?</h2>
               <h3 className="text-4xl font-bold text-slate-900 tracking-tight mb-6">
                 The Gold Standard in Physiotherapy
               </h3>
