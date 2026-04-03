@@ -249,7 +249,7 @@ export default function Home({ services, doctors }: HomeProps) {
        
     
       <div className="relative">
-  <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-sky-600 via-blue-700 to-slate-800 text-white p-10 h-full">
+  <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-700 text-white p-10 h-full">
     <div className="flex flex-col md:flex-row gap-8 items-start">
       
     {/*
