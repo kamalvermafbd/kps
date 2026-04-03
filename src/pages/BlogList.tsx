@@ -10,17 +10,15 @@ export default function BlogList() {
 const [loading, setLoading] = React.useState(true);
 
  React.useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}?action=getBlogs`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setBlogs(data.blogs);
-        }
-      })
-      .catch((err) => console.error("Blog fetch error:", err))
-      .finally(() => setLoading(false));
-  }, []);
-  
+  apiGet("getBlogs")
+    .then((data) => {
+      if (data.success) {
+        setBlogs(data.blogs);
+      }
+    })
+    .catch((err) => console.error("Blog fetch error:", err))
+    .finally(() => setLoading(false));
+}, []);
   
   return (
     <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
