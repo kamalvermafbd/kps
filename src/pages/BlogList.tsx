@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 
 
 export default function BlogList() {
-  const [blogs, setBlogs] = React.useState([]);
-const [loading, setLoading] = React.useState(true);
-
+const [blogs, setBlogs] = React.useState<any[]>([]);
+const [loading, setLoading] = React.useState<boolean>(true);
  React.useEffect(() => {
   apiGet("getBlogs")
     .then((data) => {
