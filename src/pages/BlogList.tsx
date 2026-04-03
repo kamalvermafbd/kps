@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { apiGet } from "../lib/api";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -36,12 +35,8 @@ const [loading, setLoading] = React.useState<boolean>(true);
       {!loading && (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
        {blogs.map((blog, i) => (
-          <motion.article 
+          <article 
             key={blog.slug}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all"
           >
             <div className="h-48 sm:h-56 lg:h-64 overflow-hidden bg-white p-4 border-b border-slate-100">
