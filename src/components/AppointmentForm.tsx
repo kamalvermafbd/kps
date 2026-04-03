@@ -168,43 +168,52 @@ if (response.success) {
   )}
 </div>
 
-{/* ✅ Service Dropdown yaha paste */}
+{/* ✅ Service Dropdown */}
 <div className="space-y-1">
   <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">
     Service
   </label>
+
   <select
     {...register("service")}
+    onChange={(e) => {
+      const value = e.target.value;
+      console.log("selected service =>", value);
+      console.log("services state =>", services);
 
-    apiGet("getServices").then((res) => {
-  console.log("getServices response =>", res);
+      setValue("service", value);
 
-  if (res.success) {
-    const loadedServices = res.services || [];
-    console.log("loadedServices =>", loadedServices);
+      const selected = services.find(
+        (s) => (s.name || s.service_name) === value
+      );
 
-    setServices(loadedServices);
-  }
-});
-    
+      console.log("matched service =>", selected);
+      console.log("matched charges =>", selected?.charges);
+
+      setSelectedCharge(Number(selected?.charges || 0));
+    }}
     className={cn(
       "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
       errors.service && "border-red-300 bg-red-50"
     )}
   >
     <option value="">Select Service</option>
-    {services.map((s) => (
-      <option key={s.slug} value={s.name}>
-        {s.name}
+    {services.map((s, idx) => (
+      <option key={s.slug || idx} value={s.name || s.service_name}>
+        {s.name || s.service_name}
       </option>
     ))}
   </select>
+
   {errors.service && (
     <p className="text-[10px] text-red-500 font-bold ml-1">
       {errors.service.message}
     </p>
   )}
 </div>
+
+
+       
       {console.log("selectedCharge render =>", selectedCharge)}
 {selectedCharge > 0 && (
   <p className="text-sm font-bold text-red-600 ml-1">
