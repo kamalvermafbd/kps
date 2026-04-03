@@ -1,0 +1,55 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+export default function LeadingCareBanner() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 text-white px-8 md:px-16 py-16 md:py-20">
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_40%)]" />
+
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div>
+            <p className="text-sm font-semibold text-blue-200 mb-4">
+              Every Patient Is Our Priority
+            </p>
+
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
+              Leading With Physiotherapy,
+              <br />
+              Healing With Complete Care
+            </h2>
+
+            <p className="text-lg text-slate-200 leading-relaxed mb-8 max-w-xl">
+              From the moment you enter KRP Health Care, your care becomes our
+              top priority. We combine expert treatment with a caring atmosphere,
+              advanced machines, and a smiling team — everything is designed to
+              help you recover faster and feel better, both physically and mentally.
+            </p>
+
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg"
+            >
+              Explore More <ArrowRight size={18} className="ml-2" />
+            </Link>
+          </div>
+
+          {/* Right Image */}
+          <div className="relative">
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+                alt="Physiotherapy care"
+                className="w-full h-[420px] object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
