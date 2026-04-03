@@ -45,12 +45,8 @@ export default function About({ doctors }: AboutProps) {
           </p>
 
 
-          <div className="mt-10 rounded-[32px] border border-blue-100 bg-slate-50 p-8 md:p-10">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 relative">
-    
-    {/* connector line */}
-    <div className="hidden md:block absolute top-1/2 left-[16%] right-[16%] h-[2px] bg-blue-100 -translate-y-1/2" />
-
+          <<div className="mt-12 rounded-[32px] border border-blue-200 bg-blue-50/40 p-8 md:p-10">
+  <div className="space-y-0">
     {[
       {
         title: "Compassionate Care",
@@ -65,22 +61,27 @@ export default function About({ doctors }: AboutProps) {
         desc: "Recovery, prevention, and long-term patient confidence.",
       },
     ].map((item, i) => (
-      <div
-        key={i}
-        className="relative z-10 bg-white border border-blue-100 rounded-3xl p-6 text-center shadow-sm mx-0 md:mx-3"
-      >
-        <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl">
-          0{i + 1}
+      <React.Fragment key={i}>
+        <div className="bg-white border border-blue-200 rounded-3xl p-6 shadow-sm">
+          <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center mb-4 font-bold text-xl">
+            0{i + 1}
+          </div>
+
+          <h3 className="text-2xl font-bold text-slate-900 mb-3">
+            {item.title}
+          </h3>
+
+          <p className="text-slate-600 leading-relaxed">
+            {item.desc}
+          </p>
         </div>
 
-        <h3 className="text-xl font-bold text-slate-900 mb-3">
-          {item.title}
-        </h3>
-
-        <p className="text-slate-600 leading-relaxed">
-          {item.desc}
-        </p>
-      </div>
+        {i !== 2 && (
+          <div className="h-10 flex justify-center">
+            <div className="w-[2px] bg-blue-200 rounded-full" />
+          </div>
+        )}
+      </React.Fragment>
     ))}
   </div>
 </div>
