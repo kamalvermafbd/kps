@@ -43,9 +43,9 @@ export default function ServiceDetail({ services }: ServiceDetailProps) {
       <section className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
 
-<div className="w-full h-full bg-slate-200" />
+<div className="w-full h-full bg-gradient-to-br from-[#27466b] via-[#35577b] to-[#2c4b6c]" />
           
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
