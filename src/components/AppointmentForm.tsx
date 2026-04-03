@@ -50,7 +50,6 @@ const [services, setServices] = React.useState<any[]>([]);
     resolver: zodResolver(formSchema),
     defaultValues: {
       service: selectedService || "",
-      whatsappConsent: true,
       message: "",
     }
   });
