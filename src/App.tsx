@@ -142,18 +142,23 @@ export default function App() {
           >
             <div className="flex flex-col space-y-6">
               <Link to="/" className="text-lg font-semibold border-b border-slate-100 pb-4">Home</Link>
-              <div className="space-y-4">
-                <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">Our Services</span>
-                {services.map((s) => (
-                  <Link 
-                    key={s.slug} 
-                    to={`/services/${s.slug}`}
-                    className="block text-lg font-medium text-slate-700"
-                  >
-                    {s.name}
-                  </Link>
-                ))}
-              </div>
+            <div className="space-y-3">
+  <span className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+    Our Services
+  </span>
+
+  <div className="space-y-3 pl-4 border-l border-slate-200">
+    {services.map((s) => (
+      <Link
+        key={s.slug}
+        to={`/services/${s.slug}`}
+        className="block text-[15px] font-medium text-slate-600 leading-6 hover:text-blue-600 transition-colors"
+      >
+        {s.name}
+      </Link>
+    ))}
+  </div>
+</div>
               <Link to="/blog" className="text-lg font-semibold border-b border-slate-100 pb-4">Health Blog</Link>
               <Link to="/contact" className="text-lg font-semibold border-b border-slate-100 pb-4">Contact</Link>
               <Link 
