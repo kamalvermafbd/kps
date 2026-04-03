@@ -40,7 +40,7 @@ export default function LeadingCareBanner() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200&auto=format&fit=crop"
                 alt="Physiotherapy care"
                 className="w-full h-[420px] object-cover"
                 referrerPolicy="no-referrer"
