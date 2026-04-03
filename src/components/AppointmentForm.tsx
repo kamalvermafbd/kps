@@ -97,7 +97,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
           <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
           <input 
             {...register("phone")}
-            placeholder="98765 43210"
+            placeholder="98106 81140"
             className={cn(
               "w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
               errors.phone && "border-red-300 bg-red-50"
