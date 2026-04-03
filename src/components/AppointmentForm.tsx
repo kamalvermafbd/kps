@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { apiPost, apiGet } from "../lib/api";
 import * as z from "zod";
 import { Calendar, Phone, User, MessageSquare, Clock, CheckCircle2 } from "lucide-react";
 import { cn } from "../lib/utils";
@@ -37,15 +38,12 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/appointments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, city: "Faridabad" }),
-      });
-      if (response.ok) {
-        setIsSuccess(true);
-        reset();
-      }
+    const response = await apiPost("bookAppointment", data);
+
+if (response.success) {
+  setIsSuccess(true);
+  reset();
+}
     } catch (error) {
       console.error("Booking failed:", error);
     } finally {
