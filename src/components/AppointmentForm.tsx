@@ -90,6 +90,11 @@ const handleMobileBlur = async () => {
 };
   
   const onSubmit = async (data: FormData) => {
+
+    console.log("FULL submit data =>", data);
+  console.log("CONSENT value =>", data.whatsappConsent);
+  console.log("CONSENT typeof =>", typeof data.whatsappConsent);
+
     setIsSubmitting(true);
     try {
     const response = await apiPost("bookAppointment", data);
