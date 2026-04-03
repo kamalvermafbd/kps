@@ -210,7 +210,7 @@ useEffect(() => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-16 px-4">
+      <footer className="bg-gradient-to-br from-[#1e3a5f] via-[#2f4f6f] to-[#1e293b] text-slate-300 py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-2 text-white">
