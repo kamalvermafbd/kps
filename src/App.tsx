@@ -239,7 +239,7 @@ useEffect(() => {
           <div>
             <h4 className="text-white font-bold mb-6">Our Services</h4>
             <ul className="space-y-4 text-sm">
-              {services.slice(0, 4).map(s => (
+              {services.slice(0, 5).map(s => (
                 <li key={s.slug}>
                   <Link to={`/services/${s.slug}`} className="hover:text-blue-400 transition-colors">
                     {s.name}
