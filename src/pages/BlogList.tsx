@@ -95,7 +95,19 @@ const [loading, setLoading] = React.useState<boolean>(true);
         {selectedBlog.title}
       </h2>
 
-      <p className="text-slate-600 mb-6">{selectedBlog.symptoms}</p>
+      <div className="space-y-6 mb-10">
+
+        <div>
+    <h3 className="text-xl font-bold mb-2">Common Causes</h3>
+    <p className="text-slate-600">{selectedBlog.causes}</p>
+  </div>
+</div>
+       <div>
+    <h3 className="text-xl font-bold mb-2">Symptoms</h3>
+    <p className="text-slate-600">{selectedBlog.symptoms}</p>
+  </div>
+
+ 
 
       <div className="space-y-6">
         <div>
@@ -105,7 +117,11 @@ const [loading, setLoading] = React.useState<boolean>(true);
 
         <div>
           <h3 className="text-xl font-bold mb-2">Why Choose KRP</h3>
-          <p className="text-slate-600">{selectedBlog.krp_role}</p>
+          
+<p className="text-slate-600 pb-8">
+  {selectedBlog.krp_role}
+</p>
+         
         </div>
       </div>
     </div>
