@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function LeadingCareBanner() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 text-white px-8 md:px-16 py-16 md:py-20">
+      <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-blue-700 via-blue-600 to-slate-800 text-white px-8 md:px-16 py-16 md:py-20">
         {/* Background overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_40%)]" />
 
