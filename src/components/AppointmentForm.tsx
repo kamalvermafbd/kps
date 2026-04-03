@@ -83,7 +83,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
             {...register("name")}
             placeholder="Your Name"
             className={cn(
-              "w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+              "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
               errors.name && "border-red-300 bg-red-50"
             )}
           />
@@ -99,7 +99,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
             {...register("phone")}
             placeholder="98106 81140"
             className={cn(
-              "w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+              "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
               errors.phone && "border-red-300 bg-red-50"
             )}
           />
@@ -116,7 +116,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
               type="date"
               {...register("date")}
               className={cn(
-                "w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
+                "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all",
                 errors.date && "border-red-300 bg-red-50"
               )}
             />
@@ -129,7 +129,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
             <select 
               {...register("time")}
               className={cn(
-                "w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none appearance-none transition-all",
+                "w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none appearance-none transition-all",
                 errors.time && "border-red-300 bg-red-50"
               )}
             >
@@ -152,7 +152,7 @@ export default function AppointmentForm({ selectedService }: AppointmentFormProp
             {...register("message")}
             placeholder="Any specific symptoms or requests?"
             rows={3}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
+            className="w-full bg-slate-50 border border-blue-100 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
           />
         </div>
       </div>
