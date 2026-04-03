@@ -21,6 +21,7 @@ import {
 import { cn } from "./lib/utils";
 import { Service } from "./types";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import ServiceDetail from "./pages/ServiceDetail";
 import BlogList from "./pages/BlogList";
 import Contact from "./pages/Contact";
@@ -89,6 +90,7 @@ useEffect(() => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-sm font-medium hover:text-blue-600 transition-colors">Home</Link>
+              <Link to="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">About Us</Link>
              <div ref={servicesRef} className="relative">
               <button
   onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -151,6 +153,7 @@ useEffect(() => {
           >
             <div className="flex flex-col space-y-6">
               <Link to="/" className="text-lg font-semibold border-b border-slate-100 pb-4">Home</Link>
+              <Link to="/about" className="text-lg font-semibold border-b border-slate-100 pb-4">About Us</Link>
            <div className="space-y-3">
   <button
     onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -199,6 +202,7 @@ useEffect(() => {
       <main className="pt-20">
         <Routes>
           <Route path="/" element={<Home services={services} doctors={doctors} />} />
+          <Route path="/about" element={<About doctors={doctors} />} />
           <Route path="/services/:slug" element={<ServiceDetail services={services} />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/contact" element={<Contact />} />
@@ -225,6 +229,7 @@ useEffect(() => {
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-sm">
               <li><Link to="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
               <li><Link to="/blog" className="hover:text-blue-400 transition-colors">Health Blog</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors">Book Appointment</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
