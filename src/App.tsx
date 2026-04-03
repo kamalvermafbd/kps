@@ -53,11 +53,21 @@ useEffect(() => {
 }, []);
   
  useEffect(() => {
-  window.scrollTo(0, 0);
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  } else {
+    window.scrollTo(0, 0);
+  }
+
   setIsMenuOpen(false);
   setIsDesktopServicesOpen(false);
-setIsMobileServicesOpen(false);
-}, [location.pathname]);
+  setIsMobileServicesOpen(false);
+}, [location.pathname, location.hash]);
 
   useEffect(() => {
   function handleClickOutside(event: MouseEvent) {
