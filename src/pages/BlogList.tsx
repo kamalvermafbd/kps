@@ -47,14 +47,14 @@ export default function BlogList() {
             transition={{ delay: i * 0.1 }}
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all"
           >
-            <div className="aspect-video overflow-hidden">
-              <img 
-                src={blog.image} 
-                alt={blog.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+            <div className="h-64 overflow-hidden bg-white p-4 border-b border-slate-100">
+  <img
+    src={blog.image}
+    alt={blog.title}
+    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+    referrerPolicy="no-referrer"
+  />
+</div>
             <div className="p-8">
               <div className="flex items-center space-x-2 text-xs font-bold text-blue-600 mb-4 uppercase tracking-wider">
                 <Calendar size={14} />
