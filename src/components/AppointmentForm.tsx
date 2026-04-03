@@ -84,7 +84,7 @@ if (response.success) {
   onSubmit={handleSubmit(onSubmit)}
   className="flex flex-col max-h-[70vh]"
 >
-     <div className="flex-1 overflow-y-auto pr-2 pl-1 space-y-4 custom-scrollbar">
+     <div className="flex-1 overflow-y-auto pr-2 pl-1 pb-6 space-y-4 custom-scrollbar">
       <div className="space-y-1">
         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Full Name</label>
         <div className="relative">
@@ -209,8 +209,8 @@ if (response.success) {
           I consent to receive updates on WhatsApp
         </label>
       </div>
-     </div>
-     <div className="pt-5 pb-2 mt-2 bg-white sticky bottom-0 border-t border-slate-100">
+    
+     
       <button 
         type="submit"
         disabled={isSubmitting}
