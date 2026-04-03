@@ -11,17 +11,17 @@ export async function apiGet(api: string, params: Record<string, string> = {}) {
   return res.json();
 }
 
-
 export async function apiPost(api: string, body: Record<string, any> = {}) {
+  const params = new URLSearchParams({
+    api,
+    ...Object.fromEntries(
+      Object.entries(body).map(([k, v]) => [k, String(v)])
+    ),
+  });
+
   const res = await fetch(API_BASE, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      api,
-      ...body,
-    }),
+    body: params,
   });
 
   return res.json();
