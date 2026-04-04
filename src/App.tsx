@@ -26,7 +26,8 @@ import ServiceDetail from "./pages/ServiceDetail";
 import BlogList from "./pages/BlogList";
 import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
- 
+import FitSphereIcon from "./components/icons/FitSphereIcon";
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  const [isDesktopServicesOpen, setIsDesktopServicesOpen] = useState(false);
@@ -152,6 +153,13 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
                 </div>
               </div>
               <Link to="/blog" className="text-sm font-medium hover:text-blue-600 transition-colors">Health Blog</Link>
+              <Link
+  to="/fitsphere"
+  className="text-sm font-medium hover:text-green-600 transition-colors flex items-center gap-2"
+>
+  <FitSphereIcon className="w-4 h-4" />
+  <span>FitSphere</span>
+</Link>
               <Link to="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">Contact</Link>
               <Link 
                 to="/contact" 
@@ -217,6 +225,13 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
   )}
 </div>
               <Link to="/blog" className="text-lg font-semibold border-b border-slate-100 pb-4">Health Blog</Link>
+              <Link
+  to="/fitsphere"
+  className="text-lg font-semibold border-b border-slate-100 pb-4 flex items-center gap-2"
+>
+  <FitSphereIcon className="w-5 h-5" />
+  <span>FitSphere</span>
+</Link>
               <Link to="/contact" className="text-lg font-semibold border-b border-slate-100 pb-4">Contact</Link>
               <Link 
                 to="/contact" 
