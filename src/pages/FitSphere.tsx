@@ -400,41 +400,110 @@ export default function FitSphere() {
     </div>
   </div>
 </div>
-
 <div className="mt-20">
-  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-10">
     What Clients Say About FitSphere
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
-      <p className="text-slate-600 leading-7">
-        “I lost 8 kg in 3 months with a practical diet plan that actually fit
-        my lifestyle. The regular motivation made all the difference.”
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-8 shadow-sm">
+      <div className="flex gap-1 text-green-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-5 text-slate-700 text-xl leading-9">
+        “I lost 8 kg in 3 months with a practical diet plan that fit my
+        lifestyle perfectly. The regular guidance kept me motivated.”
       </p>
-      <h3 className="mt-5 font-bold text-slate-900">
-        — Priya, Weight Management Client
-      </h3>
+
+      <div className="mt-8 flex items-center gap-4">
+        <div className="w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg">
+          PV
+        </div>
+        <div>
+          <h3 className="font-bold text-slate-900">
+            Priya Verma
+          </h3>
+          <p className="text-slate-500">
+            Weight Management Client
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
-      <p className="text-slate-600 leading-7">
-        “My sugar levels are much better controlled now. The meal plans were
-        simple, realistic, and easy for my whole family to follow.”
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-8 shadow-sm">
+      <div className="flex gap-1 text-green-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-5 text-slate-700 text-xl leading-9">
+        “My sugar levels improved significantly within weeks. The meal plans
+        were realistic and easy for my family to follow.”
       </p>
-      <h3 className="mt-5 font-bold text-slate-900">
-        — Rajesh, Diabetes Care Client
-      </h3>
+
+      <div className="mt-8 flex items-center gap-4">
+        <div className="w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg">
+          RG
+        </div>
+        <div>
+          <h3 className="font-bold text-slate-900">
+            Rajesh Gupta
+          </h3>
+          <p className="text-slate-500">
+            Diabetes Care Client
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
-      <p className="text-slate-600 leading-7">
-        “The personalized pregnancy nutrition support helped me stay healthy,
-        energetic, and confident throughout my journey.”
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-8 shadow-sm">
+      <div className="flex gap-1 text-green-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-5 text-slate-700 text-xl leading-9">
+        “The pregnancy nutrition guidance helped me stay energetic and healthy
+        throughout my journey.”
       </p>
-      <h3 className="mt-5 font-bold text-slate-900">
-        — Neha, Maternal Wellness Client
-      </h3>
+
+      <div className="mt-8 flex items-center gap-4">
+        <div className="w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg">
+          NK
+        </div>
+        <div>
+          <h3 className="font-bold text-slate-900">
+            Neha Kapoor
+          </h3>
+          <p className="text-slate-500">
+            Maternal Wellness Client
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-8 shadow-sm">
+      <div className="flex gap-1 text-green-500 text-xl">
+        ★★★★★
+      </div>
+
+      <p className="mt-5 text-slate-700 text-xl leading-9">
+        “The follow-up support and motivation made it easy to stay consistent
+        with workouts and healthy eating.”
+      </p>
+
+      <div className="mt-8 flex items-center gap-4">
+        <div className="w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg">
+          AS
+        </div>
+        <div>
+          <h3 className="font-bold text-slate-900">
+            Aman Singh
+          </h3>
+          <p className="text-slate-500">
+            Fitness Coaching Client
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
