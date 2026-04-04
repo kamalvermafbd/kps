@@ -86,7 +86,7 @@ export default function FitSphere() {
                 Science-Backed Nutrition With a Practical Lifestyle Approach
               </h2>
 
-              <div className="mt-6 space-y-5 text-slate-600 leading-8 text-[17px]">
+              <div className="mt-6 space-y-5 text-slate-600 leading-8 text-[17px] text-left md:text-justify">
                 <p>
                   Hi, I’m{" "}
                   <span className="font-semibold text-slate-900">Shweta</span>,
