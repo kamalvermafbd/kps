@@ -72,6 +72,39 @@ export default function FitSphere() {
         </div>
       </section>
 
+
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+<div className="bg-gradient-to-r from-emerald-700 to-green-600 rounded-3xl overflow-hidden shadow-xl">
+    <div className="grid md:grid-cols-3 items-center">
+      
+      {/* Left Image */}
+      <div className="flex justify-center md:justify-start p-6">
+        <img
+          src="https://i.ibb.co/zhCZsQn9/doctor-mam.png"
+          alt="FitSphere Wellness Expert"
+          className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-2xl shadow-2xl border-4 border-white/30 -mb-2"
+        />
+      </div>
+
+      {/* Right Content */}
+      <div className="md:col-span-2 p-6 md:p-10 text-white">
+        <h2 className="text-2xl md:text-4xl font-bold leading-snug">
+          FITSPHERE = FITNESS + <br /> WELLNESS SPHERE
+        </h2>
+
+        <p className="mt-5 text-lg md:text-xl text-emerald-50 leading-relaxed italic">
+          “At FitSphere, we believe true fitness begins with the fuel you
+          choose—nourish your body, energize your soul, and let balance
+          shape your journey.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      
       {/* About Shweta */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
