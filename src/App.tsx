@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { apiGet } from "./lib/api";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
+import FitSphere from "./pages/FitSphere";
 import { 
   Phone, 
   MessageSquare, 
@@ -252,6 +253,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
           <Route path="/blog" element={<BlogList blogs={blogs} />} />
           
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/fitsphere" element={<FitSphere />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
