@@ -401,7 +401,46 @@ export default function FitSphere() {
   </div>
 </div>
 
+<div className="mt-20">
+  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+    What Clients Say About FitSphere
+  </h2>
 
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
+      <p className="text-slate-600 leading-7">
+        “I lost 8 kg in 3 months with a practical diet plan that actually fit
+        my lifestyle. The regular motivation made all the difference.”
+      </p>
+      <h3 className="mt-5 font-bold text-slate-900">
+        — Priya, Weight Management Client
+      </h3>
+    </div>
+
+    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
+      <p className="text-slate-600 leading-7">
+        “My sugar levels are much better controlled now. The meal plans were
+        simple, realistic, and easy for my whole family to follow.”
+      </p>
+      <h3 className="mt-5 font-bold text-slate-900">
+        — Rajesh, Diabetes Care Client
+      </h3>
+    </div>
+
+    <div className="rounded-3xl bg-[#f8fcf6] border border-green-100 p-6 shadow-sm">
+      <p className="text-slate-600 leading-7">
+        “The personalized pregnancy nutrition support helped me stay healthy,
+        energetic, and confident throughout my journey.”
+      </p>
+      <h3 className="mt-5 font-bold text-slate-900">
+        — Neha, Maternal Wellness Client
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+            
             
           </div>
         </div>
