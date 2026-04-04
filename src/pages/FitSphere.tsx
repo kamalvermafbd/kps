@@ -7,8 +7,6 @@ export default function FitSphere() {
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20">
-
-
         <video
   autoPlay
   loop
@@ -22,7 +20,7 @@ export default function FitSphere() {
 />
 </video>
         
-        <div className="absolute inset-0 bg-white/20" />
+        <div className="absolute inset-0 bg-green-50/10" />
 
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
