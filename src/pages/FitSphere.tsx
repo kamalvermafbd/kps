@@ -32,12 +32,12 @@ export default function FitSphere() {
   <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-green-700 uppercase">
     FITSPHERE
   </h2>
-  <p className="mt-3 text-base md:text-xl text-slate-600 font-medium leading-relaxed">
-    Nourish your body, energize your soul,
-    <span className="block">
-      and let balance shape your journey.
-    </span>
-  </p>
+  <p className="mt-3 text-base md:text-xl text-slate-900 drop-shadow-sm font-semibold leading-relaxed">
+  Nourish your body, energize your soul,
+  <span className="block">
+    and let balance shape your journey.
+  </span>
+</p>
 </div>
 
 
