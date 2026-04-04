@@ -185,7 +185,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Geriatric Nutrition.jpeg"
+      src="https://i.ibb.co/35bJCpDF/Geriatric-Nutrition.png"
       alt="Geriatric Nutrition"
       className="w-full h-64 object-cover"
     />
