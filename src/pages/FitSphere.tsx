@@ -121,7 +121,7 @@ export default function FitSphere() {
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Weight Management Programs.jpeg"
+      src="https://i.ibb.co/jPMXRXWD/weight-management.png"
       alt="Weight Management Programs"
       className="w-full h-64 object-cover"
     />
@@ -137,7 +137,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Diabetes & Lifestyle Disorder Management.jpeg"
+      src="https://i.ibb.co/j91ZYQ7X/diabities.png"
       alt="Diabetes & Lifestyle Disorder Management"
       className="w-full h-64 object-cover"
     />
@@ -153,7 +153,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Nutrition for Children & Teens.jpeg"
+      src="https://i.ibb.co/5XJ8C6YZ/child-nutrition.png"
       alt="Nutrition for Children & Teens"
       className="w-full h-64 object-cover"
     />
@@ -169,7 +169,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Maternal & Women’s Health Nutrition.jpeg"
+      src="https://i.ibb.co/tpF5SRKg/maternal-women-health-nutrition.png"
       alt="Maternal & Women’s Health Nutrition"
       className="w-full h-64 object-cover"
     />
@@ -201,7 +201,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Therapeutic Diets.jpeg"
+      src="https://i.ibb.co/tRwKD0F/Therapeutic-Diets.png"
       alt="Therapeutic Diets"
       className="w-full h-64 object-cover"
     />
@@ -217,7 +217,7 @@ export default function FitSphere() {
 
   <div className={serviceCardClass}>
     <img
-      src="/images/fitsphere/Sports & Fitness Nutrition.jpeg"
+      src="https://i.ibb.co/G4NHJPxV/Sports-fitness.png"
       alt="Sports & Fitness Nutrition"
       className="w-full h-64 object-cover"
     />
