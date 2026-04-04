@@ -6,7 +6,7 @@ export default function FitSphere() {
   return (
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-24 md:pt-28 pb-12 md:pb-20 min-h-[80vh] md:min-h-screen">
+      <section className="relative overflow-hidden pt-20 md:pt-28 pb-10 md:pb-20 min-h-[60vh] md:min-h-screen">
 
 
         <video
@@ -28,7 +28,7 @@ export default function FitSphere() {
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
 
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-start md:justify-center pt-16 md:pt-0 min-h-[80vh] md:min-h-screen">
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center min-h-[60vh] md:min-h-screen">
           {/* brand heading */}
 <div className="text-center">
   <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-green-700 uppercase">
