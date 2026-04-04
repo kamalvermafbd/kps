@@ -149,7 +149,9 @@ const renderCardList = (text?: string) => {
 
   <div>
     <h3 className="text-xl font-bold mb-2">Why Choose KRP</h3>
-    {renderCardList(selectedBlog.krp_role)}
+    <p className="text-slate-600 leading-relaxed pb-4">
+  {selectedBlog.krp_role}
+</p>
   </div>
 </div>
 
