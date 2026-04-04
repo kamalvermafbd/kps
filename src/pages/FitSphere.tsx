@@ -115,46 +115,71 @@ export default function FitSphere() {
 
             {/* right services cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-                <h3 className="font-bold text-slate-900">
-                  Weight Management Programs
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-6">
-                  Safe and sustainable plans for healthy weight loss, gain, and
-                  long-term maintenance.
-                </p>
-              </div>
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Weight Management Programs
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Helping clients lose, gain, or maintain weight safely and sustainably.
+    </p>
+  </div>
 
-              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-                <h3 className="font-bold text-slate-900">
-                  Diabetes & Lifestyle Care
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-6">
-                  Personalized food and lifestyle guidance for blood sugar,
-                  cholesterol, and BP control.
-                </p>
-              </div>
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Diabetes & Lifestyle Disorder Management
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Guiding patients in controlling blood sugar, cholesterol, and blood pressure through food and lifestyle changes.
+    </p>
+  </div>
 
-              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-                <h3 className="font-bold text-slate-900">
-                  Children, Teens & Women’s Nutrition
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-6">
-                  Growth-focused nutrition plans for kids, pregnancy, postnatal
-                  recovery, PCOS, and hormones.
-                </p>
-              </div>
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Nutrition for Children & Teens
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Supporting growth, immunity, and healthy eating habits for school-going children.
+    </p>
+  </div>
 
-              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-                <h3 className="font-bold text-slate-900">
-                  Therapeutic & Fitness Nutrition
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-6">
-                  Expert diet plans for thyroid, fatty liver, digestion, sports
-                  recovery, and active lifestyles.
-                </p>
-              </div>
-            </div>
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Maternal & Women’s Health Nutrition
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Special diet plans for pregnancy, postnatal recovery, PCOS, and hormonal balance.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Geriatric Nutrition
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Helping elderly clients maintain strength, bone health, and digestion.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+    <h3 className="font-bold text-slate-900">
+      Therapeutic Diets
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Tailored plans for thyroid disorders, hypertension, fatty liver, and digestive issues.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 sm:col-span-2">
+    <h3 className="font-bold text-slate-900">
+      Sports & Fitness Nutrition
+    </h3>
+    <p className="mt-2 text-sm text-slate-600 leading-6">
+      Fueling energy, stamina, and recovery for active individuals.
+    </p>
+  </div>
+</div>
+         
+          
           </div>
         </div>
       </section>
