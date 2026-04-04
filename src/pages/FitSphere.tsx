@@ -28,8 +28,7 @@ export default function FitSphere() {
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-start md:justify-center pt-16 md:pt-0 min-h-[80vh] md:min-h-screen">
           {/* brand heading */}
 <div className="text-center">
   <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-green-700 uppercase">
