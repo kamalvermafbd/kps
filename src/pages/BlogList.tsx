@@ -38,11 +38,7 @@ const renderCardList = (text?: string) => {
           Expert advice, recovery tips, and the latest in physiotherapy from the specialists at KRP Healthcare.
         </p>
       </div>
-{loading && (
-  <div className="text-center py-10 text-slate-500">
-    Loading blogs...
-  </div>
-)}
+
       {blogs.length > 0 && (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {Array.isArray(blogs) && blogs.map((blog) => (
