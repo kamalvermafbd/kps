@@ -234,7 +234,45 @@ export default function FitSphere() {
     </div>
   </div>
 </div>
-          
+
+<div className="mt-16 rounded-3xl bg-[#f8fcf6] border border-green-100 p-8">
+  <p className="text-slate-700 leading-8 text-[17px] text-left md:text-justify">
+    Currently, I’m working with clients of all ages—children, mid-aged adults,
+    and the elderly—helping them adopt healthier, sustainable habits designed
+    to improve their overall health and quality of life.
+  </p>
+
+  <p className="mt-5 text-slate-700 leading-8 text-[17px] text-left md:text-justify">
+    When I’m not helping clients transform their health, you’ll find me
+    traveling and exploring new cultures—always on the lookout for fresh,
+    healthy, and creative food inspirations to bring back to my practice.
+  </p>
+
+  <p className="mt-5 text-slate-700 leading-8 text-[17px] font-medium text-left md:text-justify">
+    If you’re ready to take charge of your health and experience a positive
+    transformation, I’d love to work with you. Book your consultation today—your
+    journey to a healthier, happier you starts here!
+  </p>
+</div>
+
+
+<div className="mt-16">
+  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+    Why Choose FitSphere?
+  </h2>
+</div>
+
+
+
+
+
+ <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+  Your Client Journey
+</h2>           
+
+
+
+            
           </div>
         </div>
       </section>
