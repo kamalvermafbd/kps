@@ -6,7 +6,7 @@ export default function FitSphere() {
   return (
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-20 md:pt-28 pb-10 md:pb-20 min-h-[60vh] md:min-h-screen">
+      <section className="relative overflow-hidden pt-28 pb-20">
 
 
         <video
@@ -22,13 +22,14 @@ export default function FitSphere() {
 />
 </video>
         
-       <div className="absolute inset-0 bg-gradient-to-b from-[#0f3d1f]/35 via-[#0f3d1f]/10 to-transparent" />
-        
+        <div className="absolute inset-0 bg-white/40" />
+
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
 
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center min-h-[60vh] md:min-h-screen">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
           {/* brand heading */}
 <div className="text-center">
   <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-green-700 uppercase">
@@ -41,6 +42,7 @@ export default function FitSphere() {
     </span>
   </p>
 </div>
+
 
           {/* heading */}
           <h1 className="mt-8 text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
