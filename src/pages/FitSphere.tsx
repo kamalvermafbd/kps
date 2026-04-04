@@ -12,7 +12,7 @@ export default function FitSphere() {
   loop
   muted
   playsInline
-  className="absolute inset-0 w-full h-full object-cover opacity-20"
+  className="absolute inset-0 w-full h-full object-cover opacity-40"
 >
  <source
   src="https://videos.pexels.com/video-files/5865848/5865848-hd_1920_1080_25fps.mp4"
