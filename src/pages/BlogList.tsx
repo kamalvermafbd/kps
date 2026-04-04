@@ -8,11 +8,16 @@ const [loading, setLoading] = React.useState<boolean>(false);
  
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+const hasLoadedOnce = React.useRef(false);
+ 
+React.useEffect(() => {
+  let loaderTimer: any;
 
- React.useEffect(() => {
-  const loaderTimer = setTimeout(() => {
-    setLoading(true);
-  }, 400);
+  if (!hasLoadedOnce.current) {
+    loaderTimer = setTimeout(() => {
+      setLoading(true);
+    }, 400);
+  }
 
   apiGet("getBlogs")
     .then((data) => {
@@ -22,8 +27,9 @@ const [loading, setLoading] = React.useState<boolean>(false);
     })
     .catch((err) => console.error("Blog fetch error:", err))
     .finally(() => {
-      clearTimeout(loaderTimer);
+      if (loaderTimer) clearTimeout(loaderTimer);
       setLoading(false);
+      hasLoadedOnce.current = true;
     });
 }, []);
  
