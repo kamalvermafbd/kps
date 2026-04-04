@@ -12,7 +12,7 @@ export default function FitSphere() {
   loop
   muted
   playsInline
-  className="absolute inset-0 w-full h-full object-cover opacity-55"
+  className="absolute inset-0 w-full h-full object-cover opacity-40"
 >
  <source
   src="https://videos.pexels.com/video-files/5865848/5865848-hd_1920_1080_25fps.mp4"
@@ -20,7 +20,7 @@ export default function FitSphere() {
 />
 </video>
         
-       <div className="absolute inset-0 bg-transparent" />
+       <div className="absolute inset-0 bg-black/10" />
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
