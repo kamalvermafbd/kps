@@ -16,10 +16,10 @@ export default function FitSphere() {
   playsInline
   className="absolute inset-0 w-full h-full object-cover opacity-20"
 >
-  <source
-    src="https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4"
-    type="video/mp4"
-  />
+ <source
+  src="https://player.vimeo.com/external/5865848.sd.mp4?s=4f5f7f0f9f6f5d9c5e7b6d3a2c1e9a7d"
+  type="video/mp4"
+/>
 </video>
         
         <div className="absolute inset-0 bg-gradient-to-br from-[#eef8ea]/90 via-[#f7fcf5]/85 to-[#e4f3de]/90" />
