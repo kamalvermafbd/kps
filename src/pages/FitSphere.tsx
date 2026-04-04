@@ -114,7 +114,7 @@ export default function FitSphere() {
             </div>
 
             {/* right services cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
   <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
     <div className="flex items-start gap-4">
