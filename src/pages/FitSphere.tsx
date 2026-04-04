@@ -50,7 +50,7 @@ export default function FitSphere() {
           </h1>
 
           {/* subtext */}
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-white/95 leading-8 drop-shadow-md font-medium">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-900 drop-shadow-sm leading-8 font-medium">
   Personalized nutrition plans, weight management, diabetes care,
   women’s wellness, pregnancy diets, kids nutrition, and sustainable
   fitness coaching designed for real long-term results.
