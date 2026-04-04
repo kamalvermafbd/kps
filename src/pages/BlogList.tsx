@@ -24,7 +24,7 @@ const renderCardList = (text?: string) => {
 
   return (
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 mt-4">
-      {text.split("|").map((item, i) => (
+      {text.split(",").map((item, i) => (
         <li
           key={i}
           className="flex items-start space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-100"
