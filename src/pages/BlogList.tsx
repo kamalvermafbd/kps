@@ -1,7 +1,6 @@
 import React from "react";
 import { apiGet } from "../lib/api";
-import { Calendar, ArrowRight } from "lucide-react";
-
+import { Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function BlogList() {
 const [blogs, setBlogs] = React.useState<any[]>([]);
@@ -18,7 +17,32 @@ const [loading, setLoading] = React.useState<boolean>(true);
     .catch((err) => console.error("Blog fetch error:", err))
     .finally(() => setLoading(false));
 }, []);
-  
+
+
+const renderCardList = (text?: string) => {
+  if (!text) return null;
+
+  return (
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 mt-4">
+      {text.split("|").map((item, i) => (
+        <li
+          key={i}
+          className="flex items-start space-x-3 bg-slate-50 p-4 rounded-xl border border-slate-100"
+        >
+          <CheckCircle2
+            size={18}
+            className="text-blue-600 shrink-0 mt-0.5"
+          />
+          <span className="text-sm font-medium text-slate-700">
+            {item.trim()}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+ 
   return (
     <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
@@ -105,34 +129,32 @@ const [loading, setLoading] = React.useState<boolean>(true);
         {selectedBlog.title}
       </h2>
 
-<div className="mb-10">
-  <div className="mb-8">
+
+
+<div className="space-y-8 pb-6">
+  <div>
     <h3 className="text-xl font-bold mb-2">Symptoms</h3>
-    <p className="text-slate-600">{selectedBlog.symptoms}</p>
+    {renderCardList(selectedBlog.symptoms)}
   </div>
 
-  <div className="mb-2">
+  <div>
     <h3 className="text-xl font-bold mb-2">Common Causes</h3>
-    <p className="text-slate-600">{selectedBlog.causes}</p>
+    {renderCardList(selectedBlog.causes)}
+  </div>
+
+  <div>
+    <h3 className="text-xl font-bold mb-2">How Physiotherapy Helps</h3>
+    {renderCardList(selectedBlog.physio_helps)}
+  </div>
+
+  <div>
+    <h3 className="text-xl font-bold mb-2">Why Choose KRP</h3>
+    {renderCardList(selectedBlog.krp_role)}
   </div>
 </div>
- 
 
-      <div className="space-y-6">
-        <div>
-          <h3 className="text-xl font-bold mb-2">How Physiotherapy Helps</h3>
-          <p className="text-slate-600">{selectedBlog.physio_helps}</p>
-        </div>
 
-        <div>
-          <h3 className="text-xl font-bold mb-2">Why Choose KRP</h3>
-          
-<p className="text-slate-600 pb-8">
-  {selectedBlog.krp_role}
-</p>
-         
-        </div>
-      </div>
+     
     </div>
   </div>
 )}
