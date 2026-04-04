@@ -78,7 +78,7 @@ export default function FitSphere() {
     <div className="grid md:grid-cols-3 items-center">
       
       {/* Left Image */}
-      <div className="flex justify-center md:justify-start p-6">
+    <div className="flex justify-center items-center p-6 md:p-8">
         <img
           src="https://i.ibb.co/zhCZsQn9/doctor-mam.png"
           alt="FitSphere Wellness Expert"
@@ -87,17 +87,18 @@ export default function FitSphere() {
       </div>
 
       {/* Right Content */}
-      <div className="md:col-span-2 p-6 md:p-10 text-white">
-        <h2 className="text-2xl md:text-4xl font-bold leading-snug">
-          FITSPHERE = FITNESS + <br /> WELLNESS SPHERE
-        </h2>
+      <div className="md:col-span-2 p-6 md:p-10 text-white flex flex-col justify-center">
+  <div className="max-w-3xl">
+    <h2 className="text-2xl md:text-4xl font-bold leading-snug">
+      FITSPHERE = FITNESS + <br /> WELLNESS SPHERE
+    </h2>
 
-        <p className="mt-5 text-lg md:text-xl text-emerald-50 leading-relaxed italic">
-          “At FitSphere, we believe true fitness begins with the fuel you
-          choose—nourish your body, energize your soul, and let balance
-          shape your journey.”
-        </p>
-      </div>
+    <p className="mt-5 text-lg md:text-xl text-emerald-50 leading-relaxed italic">
+      “At FitSphere, we believe true fitness begins with the fuel you choose—
+      nourish your body, energize your soul, and let balance shape your journey.”
+    </p>
+  </div>
+</div>
     </div>
   </div>
 </section>
