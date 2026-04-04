@@ -115,106 +115,119 @@ export default function FitSphere() {
 
             {/* right services cards */}
             
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Weight Management Programs</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Helping clients lose, gain, or maintain weight safely and sustainably.
-        </p>
-      </div>
+ <<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Weight Management Programs.jpeg"
+      alt="Weight Management Programs"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Weight Management Programs
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Helping clients lose, gain, or maintain weight safely and sustainably.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Diabetes & Lifestyle Disorder Management</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Guiding patients in controlling blood sugar, cholesterol, and blood pressure through food and lifestyle changes.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Diabetes & Lifestyle Disorder Management.jpeg"
+      alt="Diabetes & Lifestyle Disorder Management"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Diabetes & Lifestyle Disorder Management
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Guiding patients in controlling blood sugar, cholesterol, and blood pressure through food and lifestyle changes.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Nutrition for Children & Teens</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Supporting growth, immunity, and healthy eating habits for school-going children.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Nutrition for Children & Teens.jpeg"
+      alt="Nutrition for Children & Teens"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Nutrition for Children & Teens
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Supporting growth, immunity, and healthy eating habits for school-going children.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Maternal & Women’s Health Nutrition</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Special diet plans for pregnancy, postnatal recovery, PCOS, and hormonal balance.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Maternal & Women’s Health Nutrition.jpeg"
+      alt="Maternal & Women’s Health Nutrition"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Maternal & Women’s Health Nutrition
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Special diet plans for pregnancy, postnatal recovery, PCOS, and hormonal balance.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Geriatric Nutrition</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Helping elderly clients maintain strength, bone health, and digestion.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Geriatric Nutrition.jpeg"
+      alt="Geriatric Nutrition"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Geriatric Nutrition
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Helping elderly clients maintain strength, bone health, and digestion.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Therapeutic Diets</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Tailored plans for thyroid disorders, hypertension, fatty liver, and digestive issues.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+    <img
+      src="/images/fitsphere/Therapeutic Diets.jpeg"
+      alt="Therapeutic Diets"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Therapeutic Diets
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Tailored plans for thyroid disorders, hypertension, fatty liver, and digestive issues.
+      </p>
     </div>
   </div>
 
-  <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 md:col-span-2 lg:col-span-3">
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center shrink-0">
-        <CheckCircle2 size={22} className="text-emerald-600" />
-      </div>
-      <div>
-        <h3 className="font-bold text-slate-900">Sports & Fitness Nutrition</h3>
-        <p className="mt-2 text-sm text-slate-600 leading-6">
-          Fueling energy, stamina, and recovery for active individuals.
-        </p>
-      </div>
+  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all md:col-span-2 lg:col-span-3">
+    <img
+      src="/images/fitsphere/Sports & Fitness Nutrition.jpeg"
+      alt="Sports & Fitness Nutrition"
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Sports & Fitness Nutrition
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Fueling energy, stamina, and recovery for active individuals.
+      </p>
     </div>
   </div>
 </div>
-         
           
           </div>
         </div>
