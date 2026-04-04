@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import FitSphereIcon from "../components/icons/FitSphereIcon";
 
 export default function FitSphere() {
+  
   return (
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
@@ -115,8 +116,8 @@ export default function FitSphere() {
 
             {/* right services cards */}
             
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Weight Management Programs.jpeg"
       alt="Weight Management Programs"
@@ -132,7 +133,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Diabetes & Lifestyle Disorder Management.jpeg"
       alt="Diabetes & Lifestyle Disorder Management"
@@ -148,7 +149,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Nutrition for Children & Teens.jpeg"
       alt="Nutrition for Children & Teens"
@@ -164,7 +165,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Maternal & Women’s Health Nutrition.jpeg"
       alt="Maternal & Women’s Health Nutrition"
@@ -180,7 +181,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Geriatric Nutrition.jpeg"
       alt="Geriatric Nutrition"
@@ -196,7 +197,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Therapeutic Diets.jpeg"
       alt="Therapeutic Diets"
@@ -212,7 +213,7 @@ export default function FitSphere() {
     </div>
   </div>
 
-  <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all md:col-span-2 lg:col-span-3">
+  <div className={serviceCardClass}>
     <img
       src="/images/fitsphere/Sports & Fitness Nutrition.jpeg"
       alt="Sports & Fitness Nutrition"
