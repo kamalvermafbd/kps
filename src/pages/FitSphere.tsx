@@ -123,7 +123,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/jPMXRXWD/weight-management.png"
       alt="Weight Management Programs"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -139,7 +139,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/j91ZYQ7X/diabities.png"
       alt="Diabetes & Lifestyle Disorder Management"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -155,7 +155,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/5XJ8C6YZ/child-nutrition.png"
       alt="Nutrition for Children & Teens"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -171,7 +171,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/tpF5SRKg/maternal-women-health-nutrition.png"
       alt="Maternal & Women’s Health Nutrition"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -187,7 +187,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/35bJCpDF/Geriatric-Nutrition.png"
       alt="Geriatric Nutrition"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -203,7 +203,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/tRwKD0F/Therapeutic-Diets.png"
       alt="Therapeutic Diets"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
@@ -219,7 +219,7 @@ export default function FitSphere() {
     <img
       src="https://i.ibb.co/G4NHJPxV/Sports-fitness.png"
       alt="Sports & Fitness Nutrition"
-      className="w-full h-64 object-cover"
+      className="w-full h-80 object-cover"
     />
     <div className="p-6">
       <h3 className="font-bold text-slate-900 text-xl">
