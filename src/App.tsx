@@ -56,7 +56,11 @@ useEffect(() => {
 useEffect(() => {
   apiGet("getBlogs").then((data) => {
     if (data.success) {
-      setBlogs(data.blogs || []);
+      const sortedBlogs = [...(data.blogs || [])].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
+
+      setBlogs(sortedBlogs);
     }
   });
 }, []);
