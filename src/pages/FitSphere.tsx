@@ -115,7 +115,7 @@ export default function FitSphere() {
 
             {/* right services cards */}
             
- <<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   <div className="rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all">
     <img
       src="/images/fitsphere/Weight Management Programs.jpeg"
