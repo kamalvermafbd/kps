@@ -46,37 +46,94 @@ export default function FitSphere() {
               Book Free Consultation
             </Link>
           </div>
+        </div>
+      </section>
 
-          {/* quick cards */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-green-50">
-              <h3 className="font-bold text-slate-900">
-                Personalized Nutrition
-              </h3>
-              <p className="mt-2 text-sm text-slate-600 leading-6">
-                Custom meal plans for weight loss, diabetes, PCOS and lifestyle
-                improvement.
+      {/* About Shweta */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* left content */}
+            <div>
+              <p className="text-sm font-semibold tracking-[0.2em] uppercase text-green-600">
+                About Shweta
               </p>
+
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+                Science-Backed Nutrition With a Practical Lifestyle Approach
+              </h2>
+
+              <div className="mt-6 space-y-5 text-slate-600 leading-8 text-[17px]">
+                <p>
+                  Hi, I’m{" "}
+                  <span className="font-semibold text-slate-900">Shweta</span>,
+                  a Nutrition & Diet Consultant at KRP Healthcare & Wellness
+                  Centre, Faridabad. With a strong academic foundation, multiple
+                  certifications, and my ongoing Master’s in Dietetics and Food
+                  Service Management, I blend evidence-based nutrition with
+                  practical, sustainable solutions that help clients achieve
+                  real and lasting health outcomes.
+                </p>
+
+                <p>
+                  Having lived in Australia for several years, I personally
+                  experienced the transformative power of a healthy, active
+                  lifestyle. Today, I bring that same balanced and realistic
+                  wellness philosophy to clients in India—helping them lose
+                  weight, manage lifestyle disorders, improve confidence, and
+                  build healthier habits for life.
+                </p>
+
+                <p>
+                  At KRP Healthcare, our focus goes beyond diet charts. We
+                  create personalised nutrition strategies, simple daily fitness
+                  routines, and habit-based wellness systems that seamlessly fit
+                  into modern lifestyles for all age groups.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-green-50">
-              <h3 className="font-bold text-slate-900">
-                Weight Management
-              </h3>
-              <p className="mt-2 text-sm text-slate-600 leading-6">
-                Sustainable plans to lose, gain, or maintain healthy weight
-                without crash dieting.
-              </p>
-            </div>
+            {/* right services cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+                <h3 className="font-bold text-slate-900">
+                  Weight Management Programs
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-6">
+                  Safe and sustainable plans for healthy weight loss, gain, and
+                  long-term maintenance.
+                </p>
+              </div>
 
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-green-50">
-              <h3 className="font-bold text-slate-900">
-                Women & Fitness Wellness
-              </h3>
-              <p className="mt-2 text-sm text-slate-600 leading-6">
-                Pregnancy, PCOS, hormonal balance, sports recovery and active
-                lifestyle support.
-              </p>
+              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+                <h3 className="font-bold text-slate-900">
+                  Diabetes & Lifestyle Care
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-6">
+                  Personalized food and lifestyle guidance for blood sugar,
+                  cholesterol, and BP control.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+                <h3 className="font-bold text-slate-900">
+                  Children, Teens & Women’s Nutrition
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-6">
+                  Growth-focused nutrition plans for kids, pregnancy, postnatal
+                  recovery, PCOS, and hormones.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6">
+                <h3 className="font-bold text-slate-900">
+                  Therapeutic & Fitness Nutrition
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-6">
+                  Expert diet plans for thyroid, fatty liver, digestion, sports
+                  recovery, and active lifestyles.
+                </p>
+              </div>
             </div>
           </div>
         </div>
