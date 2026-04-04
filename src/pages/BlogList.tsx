@@ -8,12 +8,12 @@ const [loading, setLoading] = React.useState<boolean>(false);
  
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
-const hasLoadedOnce = React.useRef(false);
  
 React.useEffect(() => {
   let loaderTimer: any;
+  const loaderShown = sessionStorage.getItem("blogLoaderShown");
 
-  if (!hasLoadedOnce.current) {
+  if (!loaderShown) {
     loaderTimer = setTimeout(() => {
       setLoading(true);
     }, 400);
@@ -29,7 +29,7 @@ React.useEffect(() => {
     .finally(() => {
       if (loaderTimer) clearTimeout(loaderTimer);
       setLoading(false);
-      hasLoadedOnce.current = true;
+      sessionStorage.setItem("blogLoaderShown", "true");
     });
 }, []);
  
