@@ -6,7 +6,7 @@ export default function FitSphere() {
   return (
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
-      <section className="relative overflow-hidden pt-28 pb-20">
+      <section className="relative overflow-hidden pt-24 md:pt-28 pb-12 md:pb-20 min-h-[80vh] md:min-h-screen">
 
 
         <video
