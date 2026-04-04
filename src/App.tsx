@@ -33,7 +33,7 @@ export default function App() {
 const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
  const [services, setServices] = useState<Service[]>([]);
 const [doctors, setDoctors] = useState([]);
-   
+   const [blogs, setBlogs] = useState([]);
   const servicesRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
  
@@ -53,27 +53,14 @@ useEffect(() => {
   });
 }, []);
 
-
 useEffect(() => {
-  const runWarmup = () => {
-    const warmBlogs = () => {
-      apiGet("getBlogs").catch(() => {});
-    };
-
-    if ("requestIdleCallback" in window) {
-      (window as any).requestIdleCallback(warmBlogs);
-    } else {
-      setTimeout(warmBlogs, 3000);
+  apiGet("getBlogs").then((data) => {
+    if (data.success) {
+      setBlogs(data.blogs || []);
     }
-  };
-
-  if (document.readyState === "complete") {
-    runWarmup();
-  } else {
-    window.addEventListener("load", runWarmup);
-    return () => window.removeEventListener("load", runWarmup);
-  }
+  });
 }, []);
+
   
  useEffect(() => {
   if (location.hash) {
@@ -243,7 +230,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
           <Route path="/" element={<Home services={services} doctors={doctors} />} />
           <Route path="/about" element={<About doctors={doctors} />} />
           <Route path="/services/:slug" element={<ServiceDetail services={services} />} />
-          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog" element={<BlogList blogs={blogs} />} />
           
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
