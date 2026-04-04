@@ -20,8 +20,7 @@ export default function FitSphere() {
 />
 </video>
         
-        <div className="absolute inset-0 bg-green-50/10" />
-
+       <div className="absolute inset-0 bg-transparent" />
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
