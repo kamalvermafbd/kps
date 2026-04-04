@@ -4,10 +4,16 @@ import { Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function BlogList() {
 const [blogs, setBlogs] = React.useState<any[]>([]);
-const [loading, setLoading] = React.useState<boolean>(true);
+const [loading, setLoading] = React.useState<boolean>(false);
+ 
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+
  React.useEffect(() => {
+  const loaderTimer = setTimeout(() => {
+    setLoading(true);
+  }, 400);
+
   apiGet("getBlogs")
     .then((data) => {
       if (data.success) {
@@ -15,8 +21,12 @@ const [loading, setLoading] = React.useState<boolean>(true);
       }
     })
     .catch((err) => console.error("Blog fetch error:", err))
-    .finally(() => setLoading(false));
+    .finally(() => {
+      clearTimeout(loaderTimer);
+      setLoading(false);
+    });
 }, []);
+ 
 
 
 const renderCardList = (text?: string) => {
