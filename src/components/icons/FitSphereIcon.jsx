@@ -17,4 +17,4 @@ export default function FitSphereIcon({ className = "w-5 h-5" }) {
       />
     </svg>
   );
-}
+} 
