@@ -7,7 +7,22 @@ export default function FitSphere() {
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
       <section className="relative overflow-hidden pt-28 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eef8ea] via-[#f7fcf5] to-[#e4f3de]" />
+
+
+        <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover opacity-20"
+>
+  <source
+    src="https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4"
+    type="video/mp4"
+  />
+</video>
+        
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eef8ea]/90 via-[#f7fcf5]/85 to-[#e4f3de]/90" />
 
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
@@ -17,7 +32,7 @@ export default function FitSphere() {
       
           {/* brand heading */}
 <div className="text-center">
-  <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-slate-900 uppercase">
+  <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-green-700 uppercase">
     FITSPHERE
   </h2>
   <p className="mt-3 text-base md:text-xl text-slate-600 font-medium leading-relaxed">
