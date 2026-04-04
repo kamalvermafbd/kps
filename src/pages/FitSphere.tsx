@@ -71,7 +71,7 @@ export default function FitSphere() {
       {/* About Shweta */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-12">
             {/* left content */}
             <div>
               <p className="text-sm font-semibold tracking-[0.2em] uppercase text-green-600">
