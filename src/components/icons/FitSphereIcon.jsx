@@ -5,7 +5,7 @@ export default function FitSphereIcon({ className = "w-5 h-5" }) {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle fill="#FFD15D" cx="256" cy="256" r="256" />
+      <circle fill="#16A34A" cx="256" cy="256" r="256" />
       <rect x="199.111" y="139.431" fill="#FFFFFF" width="199.111" height="256" />
       <path
         fill="#C1321F"
