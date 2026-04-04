@@ -17,7 +17,7 @@ export default function FitSphere() {
   className="absolute inset-0 w-full h-full object-cover opacity-20"
 >
  <source
-  src="https://player.vimeo.com/external/5865848.sd.mp4?s=4f5f7f0f9f6f5d9c5e7b6d3a2c1e9a7d"
+  src="https://www.pexels.com/video/high-angle-shot-of-vegetables-5865848/"
   type="video/mp4"
 />
 </video>
