@@ -22,7 +22,7 @@ export default function FitSphere() {
 />
 </video>
         
-        <div className="absolute inset-0 bg-white/40" />
+       <div className="absolute inset-0 bg-gradient-to-r from-[#eef8ea]/75 via-[#eef8ea]/35 to-transparent" />
 
         {/* floating decorative shapes */}
         <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-green-200/40 blur-2xl" />
