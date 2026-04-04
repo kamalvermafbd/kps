@@ -14,13 +14,19 @@ export default function FitSphere() {
         <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-lime-200/40 blur-3xl" />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* badge */}
-          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-green-100 rounded-full px-5 py-2 shadow-sm">
-            <FitSphereIcon className="w-8 h-8" />
-            <span className="text-sm font-semibold text-green-700">
-              FitSphere by Shweta
-            </span>
-          </div>
+      
+          {/* brand heading */}
+<div className="text-center">
+  <h2 className="text-4xl md:text-6xl font-extrabold tracking-[0.08em] text-slate-900 uppercase">
+    FITSPHERE
+  </h2>
+  <p className="mt-3 text-base md:text-xl text-slate-600 font-medium leading-relaxed">
+    Nourish your body, energize your soul,
+    <span className="block">
+      and let balance shape your journey.
+    </span>
+  </p>
+</div>
 
           {/* heading */}
           <h1 className="mt-8 text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
