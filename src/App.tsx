@@ -157,7 +157,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
   to="/fitsphere"
   className="text-sm font-medium hover:text-green-600 transition-colors flex items-center gap-2"
 >
-  <FitSphereIcon className="w-4 h-4" />
+  <FitSphereIcon className="w-8 h-8" />
   <span>FitSphere</span>
 </Link>
               <Link to="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">Contact</Link>
@@ -229,7 +229,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
   to="/fitsphere"
   className="text-lg font-semibold border-b border-slate-100 pb-4 flex items-center gap-2"
 >
-  <FitSphereIcon className="w-5 h-5" />
+  <FitSphereIcon className="w-8 h-8" />
   <span>FitSphere</span>
 </Link>
               <Link to="/contact" className="text-lg font-semibold border-b border-slate-100 pb-4">Contact</Link>
