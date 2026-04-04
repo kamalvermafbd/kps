@@ -4,7 +4,9 @@ import { CheckCircle2 } from "lucide-react";
 import FitSphereIcon from "../components/icons/FitSphereIcon";
 
 export default function FitSphere() {
-  
+  const serviceCardClass =
+    "rounded-[28px] overflow-hidden bg-white shadow-lg border border-green-100 hover:shadow-xl transition-all";
+
   return (
     <div className="min-h-screen bg-[#eef8ea]">
       {/* Hero */}
