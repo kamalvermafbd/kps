@@ -260,6 +260,53 @@ export default function FitSphere() {
   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
     Why Choose FitSphere?
   </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 shadow-sm">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Certified & Experienced
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Masters + certifications in nutrition with evidence-based practical guidance.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 shadow-sm">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Holistic Approach
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        A complete system combining diet, fitness, motivation, and sustainable lifestyle habits.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 shadow-sm">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Personal Support & Guidance
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        One-on-one support, regular follow-ups, and practical accountability.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 shadow-sm">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Trusted Wellness Centre
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Based at KRP Healthcare & Wellness Centre, Faridabad.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-green-100 bg-[#f8fcf6] p-6 shadow-sm md:col-span-2 lg:col-span-2">
+      <h3 className="font-bold text-slate-900 text-xl">
+        Passionate Lifestyle Transformation
+      </h3>
+      <p className="mt-3 text-slate-600 leading-7">
+        Focused on helping you build healthier routines that create long-term life-changing results.
+      </p>
+    </div>
+  </div>
 </div>
 
 
