@@ -6,7 +6,7 @@ export default function BlogList() {
 const [blogs, setBlogs] = React.useState<any[]>([]);
 const [loading, setLoading] = React.useState<boolean>(true);
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
- 
+ const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
  React.useEffect(() => {
   apiGet("getBlogs")
     .then((data) => {
@@ -63,7 +63,10 @@ const renderCardList = (text?: string) => {
             key={blog.slug}
             className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all"
           >
-            <div className="h-48 sm:h-56 lg:h-64 overflow-hidden bg-white p-4 border-b border-slate-100">
+            <div
+  className="h-48 sm:h-56 lg:h-64 overflow-hidden bg-white p-4 border-b border-slate-100 cursor-pointer"
+  onClick={() => setSelectedImage(blog.image)}
+>
   <img
     src={blog.image}
     alt={blog.title}
@@ -160,7 +163,23 @@ const renderCardList = (text?: string) => {
     </div>
   </div>
 )}
-   
+
+
+{selectedImage && (
+  <div
+    className="fixed inset-0 z-[60] bg-black/80 flex items-center justify-center p-4"
+    onClick={() => setSelectedImage(null)}
+  >
+    <img
+      src={selectedImage}
+      alt="Preview"
+      className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
+    />
+  </div>
+)}
+
+
+     
     </div>
   );
 }
