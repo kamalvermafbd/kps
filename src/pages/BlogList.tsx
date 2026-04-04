@@ -21,7 +21,10 @@ const renderCardList = (text?: string) => {
             className="text-blue-600 shrink-0 mt-0.5"
           />
           <span className="text-sm font-medium text-slate-700">
-            {item.trim()}
+            {item
+  .trim()
+  .replace(/^(and|or)\s+/i, "")
+  .replace(/^./, (char) => char.toUpperCase())}
           </span>
         </li>
       ))}
