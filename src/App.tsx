@@ -262,7 +262,7 @@ onMouseLeave={() => setIsDesktopServicesOpen(false)}
       <footer
   className={`text-slate-300 py-16 px-4 ${
     location.pathname === "/fitsphere"
-     ? "bg-gradient-to-br from-[#3f9d68] via-[#48bb78] to-[#9ae6b4]"
+     ? "bg-gradient-to-br from-[#0f3d1f] via-[#166534] to-[#14532d]"
       : "bg-gradient-to-br from-[#1e3a5f] via-[#2f4f6f] to-[#1e293b]"
   }`}
 >
