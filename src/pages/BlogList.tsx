@@ -1,17 +1,11 @@
 import React from "react";
-import { apiGet } from "../lib/api";
 import { Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function BlogList({ blogs = [] }: { blogs?: any[] }) {
-const [loading, setLoading] = React.useState<boolean>(false);
  
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
  
-
- 
-
-
 const renderCardList = (text?: string) => {
   if (!text) return null;
 
