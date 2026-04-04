@@ -52,6 +52,28 @@ useEffect(() => {
     }
   });
 }, []);
+
+
+useEffect(() => {
+  const runWarmup = () => {
+    const warmBlogs = () => {
+      apiGet("getBlogs").catch(() => {});
+    };
+
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(warmBlogs);
+    } else {
+      setTimeout(warmBlogs, 3000);
+    }
+  };
+
+  if (document.readyState === "complete") {
+    runWarmup();
+  } else {
+    window.addEventListener("load", runWarmup);
+    return () => window.removeEventListener("load", runWarmup);
+  }
+}, []);
   
  useEffect(() => {
   if (location.hash) {
