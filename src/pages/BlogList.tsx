@@ -2,36 +2,13 @@ import React from "react";
 import { apiGet } from "../lib/api";
 import { Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 
-export default function BlogList() {
-const [blogs, setBlogs] = React.useState<any[]>([]);
+export default function BlogList({ blogs = [] }: { blogs?: any[] }) {
 const [loading, setLoading] = React.useState<boolean>(false);
  
  const [selectedBlog, setSelectedBlog] = React.useState<any | null>(null);
  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
  
-React.useEffect(() => {
-  let loaderTimer: any;
-  const loaderShown = sessionStorage.getItem("blogLoaderShown");
 
-  if (!loaderShown) {
-    loaderTimer = setTimeout(() => {
-      setLoading(true);
-    }, 400);
-  }
-
-  apiGet("getBlogs")
-    .then((data) => {
-      if (data.success) {
-        setBlogs(data.blogs);
-      }
-    })
-    .catch((err) => console.error("Blog fetch error:", err))
-    .finally(() => {
-      if (loaderTimer) clearTimeout(loaderTimer);
-      setLoading(false);
-      sessionStorage.setItem("blogLoaderShown", "true");
-    });
-}, []);
  
 
 
